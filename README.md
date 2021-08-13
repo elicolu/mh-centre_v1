@@ -28,6 +28,18 @@ This study will identify the semantic formalisation of historical centres design
 
 ### Main References:
 
+  Acierno, M., Cursi, S., Simeone, D., & Fiorani, D. (2017). Architectural heritage knowledge modelling: An ontology-based framework for conservation process. Journal of Cultural Heritage, 24, 124–133. Doerr M. (2002). The CIDOC CRM: an ontological approach to semantic interoperability of metadata. AI Magazine, Special Issue, 24(3), pp. 75-92.
+  
+  Fonseca, F. T., Egenhofer, M. J., Agouris, P., & Caã, G. (2002). Using Ontologies for Integrated Geographic Information Systems. Transactions in GIS, 6(3), 231–257.
+  
+  Gruber, T. R. (1993). A translation approach to portable ontology specifications. Knowledge Acquisition, pp. 199–220. Guarino, N., Welty, C. (2000). A formal ontology of properties. Knowledge Engineering and Knowledge Management Methods, Models, and Tools. Springer Berlin Heidelberg. pp. 97-112.
+ 
+ Kokla, M., Mostafavi, M. A., Noardo, F., & Spanò, A. (2019). Towards building a semantic formalization of (small) historical centres. ISPRS Annals of the Photogrammetry, Remote Sensing and Spatial Information Sciences, XLII-2/W11(2/W11), 675–683Laurini, R. (2014). A conceptual framework for geographic knowledge engineering. Journal of Visual Languages and Computing, 25(1), 2–19. 
+ 
+  Noy, N. F., & McGuinness, D. L. (2001). Ontology Development 101: A Guide to Creating Your First Ontology. Technical Report KSL–01–05, Stanford Knowledge Systems Laboratory. 
+  
+  Studer, R., Benjamins, V. R., & Fensel, D. (1998). Knowledge Engineering: Principles and methods. Data and Knowledge Engineering, 25(1–2), 161–197. 
+
 
 
 
