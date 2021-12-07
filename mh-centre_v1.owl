@@ -28,42 +28,55 @@
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="dc:contributor"/>
-        <Literal>Margarita Kokla
-Andrea Maria Lingua
+        <Literal datatypeIRI="http://www.opengis.net/ont/geosparql#gmlLiteral">Elisabetta Colucci -
+
+Supervised by:
+Margarita Kokla,
+Andrea Maria Lingua,
 Antonia Spanò</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="dc:date"/>
-        <Literal>07/04/2021
-16/06/2021
-24/08/2021
-13/09/2021
-27/10/2021
-25/11/2021 --&gt; instances</Literal>
+        <Literal datatypeIRI="http://www.opengis.net/ont/geosparql#gmlLiteral">07/04/2021 -
+16/06/2021 -
+24/08/2021 -
+13/09/2021 -
+27/10/2021 -
+25/11/2021 -
+07/12/2021</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="dc:description"/>
-        <Literal>Elisabetta Colucci PhD thesis</Literal>
+        <Literal datatypeIRI="http://www.opengis.net/ont/geosparql#gmlLiteral">MHC ontology rules
+Before starting adding concepts and relations in Protègè, some rules have been set for MHC ontology, taking into account the scope of my ontology:
+
+	classes are expressed with “singular” terms,
+	IS-A relations are hierarchies (inheritance concept super-classes/sub-classes),
+	new meronymy, “part-of” relations are codified adding one number e the letters (the initials of the two tables related) before the world “has-part” or “is-part-of” (e.g., 01_CH_has-part),
+	words, properties and definitions are expressed in Great Britain English (e.g., historical centres – not historical centers),
+	classes can have more than one superclass because Protègè (and OWL) supports multiple-inheritance,
+	entities have different “roles”: they could be ABSTRACT (without instances) or CONCRETE (with data/information),
+	semantic descriptions of concepts have been added as “rdfs:comment” with their source (e.g., Getty ATT, HC books, CIDOC-CRM and so on),
+	the concepts historic and historical are intended as the same adjective “historical”, with the meaning “concerning history or belonging to the past”.
+
+
+Keywords:
+Geospatial ontology, Minor Historical Centres (MHC), Spatial and Temporal Documentation, Geospatial Information (GI), Geographic Information System and Science (GIS), Semantics Formalisation, WebGIS, Linked data, Multiscale representation, Level of Details, Cultural Architectural Built and Landscape Heritage.</Literal>
     </Annotation>
     <Annotation>
-        <AnnotationProperty IRI="#Description"/>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <Literal datatypeIRI="http://www.opengis.net/ont/geosparql#gmlLiteral">Geospatial ontology to support the documentation of Minor Historical Centres (MHC)
 
-PhD thesis in Urban and Regional Development (URD) - Politecnico di Torino - 34th cycle</Literal>
-    </Annotation>
-    <Annotation>
-        <AnnotationProperty IRI="#Description"/>
-        <Literal datatypeIRI="http://www.opengis.net/ont/geosparql#gmlLiteral">The research presented in this work encompasses two main research fields: geomatics and geographical information. The main research topic of this thesis focuses on the possibility to standardise spatial information in the domain of minor historical centres (MHC) and the related architectural, built and landscape heritage. Nevertheless, the notions of the urban centre, historical city, and ancient urban area are not consolidated overall, took different meanings, and evolved over the centuries. Historical centres (HC) are intended as a historical part of cities, villages and hamlets (urban, rural, minor or abandoned) with cultural, social and economic values. They need to be preserved, documented and safeguarded due to their intrinsic evolution of functions, values, morphologies, and geometries. Therefore, the study, the communication and the protection of this heritage are supported by many processes and require specific data to be collected, stored, and post-processed. In addition, these activities involve many disciplines, actors, and stakeholders, leading to sharing common knowledge and using a unique language.
+PhD thesis in Urban and Regional Development (URD) - Politecnico di Torino - 34th cycle
+
+
+The research presented in this work encompasses two main research fields: geomatics and geographical information. The main research topic of this thesis focuses on the possibility to standardise spatial information in the domain of minor historical centres (MHC) and the related architectural, built and landscape heritage. Nevertheless, the notions of the urban centre, historical city, and ancient urban area are not consolidated overall, took different meanings, and evolved over the centuries. Historical centres (HC) are intended as a historical part of cities, villages and hamlets (urban, rural, minor or abandoned) with cultural, social and economic values. They need to be preserved, documented and safeguarded due to their intrinsic evolution of functions, values, morphologies, and geometries. Therefore, the study, the communication and the protection of this heritage are supported by many processes and require specific data to be collected, stored, and post-processed. In addition, these activities involve many disciplines, actors, and stakeholders, leading to sharing common knowledge and using a unique language.
 
 The core of this research methodology focuses on the study of ontologies for spatial data: geospatial ontologies.  Ontologies can be considered as conceptual structures able to formalise the explicit knowledge of a domain. They are of particular usefulness to create a unique and standard thesaurus and to ensure semantic interoperability. In the ontology engineering process, classes are semantically expressed with their relations and connected by relationships. In geographic sciences, this formalisation of concepts allows digital information control between different operating systems by communicating with geographic tools. This thesis is targeted to fill various gaps in the nowadays scenario of geospatial information (GI). There is no defined ontology containing helpful information to manage, share and collect data on historical and minor rural centres. Moreover, an interoperable structure is lacking to semantic formalises cultural built, urban, architectural heritage. The research developed a spatial ontology integrating existing knowledge (ontologies, vocabularies and standards) representing geographical objects of built and territorial heritage.
 
 The domain of this study is identified in historical centres, and the ontology scope is their spatial and temporal documentation. The design of this ontological structure can help various actors involved in the decision-making process of small urban and rural areas in different scenarios (such as rural villages, alpine hamlets, historical city centres needing restoration actions, urban planning or rehinabitation activities). For this purpose, the methodology is validated, enriching and populating (adding classes and instances) the ontology with structured and unstructured data of real data case studies (a Dutch village near a lake and an Italian alpine hamlet). Concepts from existing urban regulation plans, historical documents, regional landscape plans, data models, datasets and data from 3D integrated metric surveys have been collected, harmonised and inserted into the ontology.
 
 Finally, this thesis wants to produce an accurate representation of reality through a multi-scale approach considering different levels of detail. This final aim regards the publication of the GIS (Geographic Information System/Science) projects of the case studies. For each use case, a geodatabase was published in a WebGIS application in which it is possible to query geometries and directly open the related semantic classes of the ontology.</Literal>
-    </Annotation>
-    <Annotation>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <Literal>First version of minor historical centres ontology for spatial documentation</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
