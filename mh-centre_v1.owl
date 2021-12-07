@@ -5,7 +5,8 @@
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     ontologyIRI="http://purl.org/net/mh-centre_v1">
+     ontologyIRI="http://purl.org/net/mh-centre_v1"
+     versionIRI="http://purl.org/net/mh-centre_v1">
     <Prefix name="" IRI="http://purl.org/net/mh-centre_v1"/>
     <Prefix name="g" IRI="http://www.semanticweb.org/betti/ontologies/2020/5/minor_historical_centres_v1/"/>
     <Prefix name="dc" IRI="http://purl.org/dc/elements/1.1/"/>
@@ -18,17 +19,51 @@
     <Prefix name="Sloten_casestudy" IRI="http://www.semanticweb.org/elisabetta/ontologies/2021/3/Sloten_casestudy#"/>
     <Prefix name="minor_historical_centres_v1" IRI="http://www.semanticweb.org/betti/ontologies/2020/5/minor_historical_centres_v1#"/>
     <Annotation>
+        <AnnotationProperty IRI="http://ainf.aau.at/ontodebug#testCase"/>
+        <AnonymousIndividual nodeID="_:genid2147483648"/>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://ainf.aau.at/ontodebug#testCase"/>
+        <AnonymousIndividual nodeID="_:genid2147483649"/>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:contributor"/>
+        <Literal>Margarita Kokla
+Andrea Maria Lingua
+Antonia Spanò</Literal>
+    </Annotation>
+    <Annotation>
         <AnnotationProperty abbreviatedIRI="dc:date"/>
         <Literal>07/04/2021
-16/06/2021</Literal>
+16/06/2021
+24/08/2021
+13/09/2021
+27/10/2021
+25/11/2021 --&gt; instances</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="dc:description"/>
-        <Literal>Elisabetta Colucci</Literal>
+        <Literal>Elisabetta Colucci PhD thesis</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="#Description"/>
+        <Literal datatypeIRI="http://www.opengis.net/ont/geosparql#gmlLiteral">Geospatial ontology to support the documentation of Minor Historical Centres (MHC)
+
+PhD thesis in Urban and Regional Development (URD) - Politecnico di Torino - 34th cycle</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="#Description"/>
+        <Literal datatypeIRI="http://www.opengis.net/ont/geosparql#gmlLiteral">The research presented in this work encompasses two main research fields: geomatics and geographical information. The main research topic of this thesis focuses on the possibility to standardise spatial information in the domain of minor historical centres (MHC) and the related architectural, built and landscape heritage. Nevertheless, the notions of the urban centre, historical city, and ancient urban area are not consolidated overall, took different meanings, and evolved over the centuries. Historical centres (HC) are intended as a historical part of cities, villages and hamlets (urban, rural, minor or abandoned) with cultural, social and economic values. They need to be preserved, documented and safeguarded due to their intrinsic evolution of functions, values, morphologies, and geometries. Therefore, the study, the communication and the protection of this heritage are supported by many processes and require specific data to be collected, stored, and post-processed. In addition, these activities involve many disciplines, actors, and stakeholders, leading to sharing common knowledge and using a unique language.
+
+The core of this research methodology focuses on the study of ontologies for spatial data: geospatial ontologies.  Ontologies can be considered as conceptual structures able to formalise the explicit knowledge of a domain. They are of particular usefulness to create a unique and standard thesaurus and to ensure semantic interoperability. In the ontology engineering process, classes are semantically expressed with their relations and connected by relationships. In geographic sciences, this formalisation of concepts allows digital information control between different operating systems by communicating with geographic tools. This thesis is targeted to fill various gaps in the nowadays scenario of geospatial information (GI). There is no defined ontology containing helpful information to manage, share and collect data on historical and minor rural centres. Moreover, an interoperable structure is lacking to semantic formalises cultural built, urban, architectural heritage. The research developed a spatial ontology integrating existing knowledge (ontologies, vocabularies and standards) representing geographical objects of built and territorial heritage.
+
+The domain of this study is identified in historical centres, and the ontology scope is their spatial and temporal documentation. The design of this ontological structure can help various actors involved in the decision-making process of small urban and rural areas in different scenarios (such as rural villages, alpine hamlets, historical city centres needing restoration actions, urban planning or rehinabitation activities). For this purpose, the methodology is validated, enriching and populating (adding classes and instances) the ontology with structured and unstructured data of real data case studies (a Dutch village near a lake and an Italian alpine hamlet). Concepts from existing urban regulation plans, historical documents, regional landscape plans, data models, datasets and data from 3D integrated metric surveys have been collected, harmonised and inserted into the ontology.
+
+Finally, this thesis wants to produce an accurate representation of reality through a multi-scale approach considering different levels of detail. This final aim regards the publication of the GIS (Geographic Information System/Science) projects of the case studies. For each use case, a geodatabase was published in a WebGIS application in which it is possible to query geometries and directly open the related semantic classes of the ontology.</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <Literal>First version of historical centres ontology for spatial documentation of minor and abandoned historical centres</Literal>
+        <Literal>First version of minor historical centres ontology for spatial documentation</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -40,9 +75,6 @@
     </Annotation>
     <Declaration>
         <Class IRI="#Abandoned_building"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Activity"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Archaeological_remain"/>
@@ -96,13 +128,13 @@
         <Class IRI="#Heritage"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Historic_building"/>
+        <Class IRI="#Historical_building"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Historic_town"/>
+        <Class IRI="#Historical_town"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Historic_urban_landscape"/>
+        <Class IRI="#Historical_urban_landscape"/>
     </Declaration>
     <Declaration>
         <Class IRI="#House"/>
@@ -207,7 +239,25 @@
         <Class IRI="#abandoned_historical_centre"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#alpine_core"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#alpine_environment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#alpine_settlement"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#architectural_heritage"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#avalanche"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#axex"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#biomass"/>
     </Declaration>
     <Declaration>
         <Class IRI="#brick"/>
@@ -219,10 +269,25 @@
         <Class IRI="#built_heritage"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#city"/>
+        <Class IRI="#canopy"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#central_city"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#church"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#cityscape"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#citywall"/>
     </Declaration>
     <Declaration>
         <Class IRI="#construction_area"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#country"/>
     </Declaration>
     <Declaration>
         <Class IRI="#cultural_centre"/>
@@ -231,10 +296,46 @@
         <Class IRI="#cultural_heritage"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#earthquake"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#energy"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#environment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#facade_outer_wall"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#facility"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#family"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#fortification_line"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#fountain"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#function"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#geotermal"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#group_of_buildings"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#historic_monument"/>
+        <Class IRI="#hamlet"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#high_alpine_area"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#historic_naturalistic_landscape_value"/>
     </Declaration>
     <Declaration>
         <Class IRI="#historical_centre"/>
@@ -243,40 +344,181 @@
         <Class IRI="#historical_city"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#historical_core"/>
+        <Class IRI="#historical_city_core"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#historical_landscape"/>
+        <Class IRI="#historical_monument"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#historical_naturalistic_heritage"/>
     </Declaration>
     <Declaration>
         <Class IRI="#historical_quarter"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#historical_urban_centre"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#hydric"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#inhabitant"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#intangible_cultural_heritage"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#landscape_area"/>
     </Declaration>
     <Declaration>
         <Class IRI="#landscape_cultural_heritage"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#landscape_unity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#landslide"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#maintenance"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#man-made"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#masonry"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#military_structure"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#mine"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#monument"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#mountain_hamlet"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#mule_track"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#municipality"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#museum"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#natural"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#natural_feature"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#natural_park"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#net"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#oven"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#pole_of_religiosity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#population"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#protection"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#recovery_plan"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#regional_territory"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#renewable"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#risk_hazard"/>
     </Declaration>
     <Declaration>
         <Class IRI="#rural_area"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#school"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#site"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ski_area"/>
     </Declaration>
     <Declaration>
         <Class IRI="#small_town"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#solar"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#stone_house"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#storey"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#structure"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#structure_not_building"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#subAlpine_forest"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#sub_area"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#suburb"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#urban_centre"/>
+        <Class IRI="#sundial"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#sustainable_development"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#territory"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#village"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#visual_relationship"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#wind"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#wireless"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#wooden_context"/>
     </Declaration>
     <Declaration>
         <Class IRI="#yard"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Holiday_resort/leisure_centre"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#parcel/ground"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="y#gable"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcBuildingElement"/>
@@ -480,97 +722,13 @@
         <Class IRI="http://www.opengis.net/ont/sf#OWLClassImpl_b354a948_5e9c_4dd6_b88d_40c99501781f"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://www.opengis.net/ont/sf#OWLClassImpl_b6007aec_2881_4cae_84cf_26957298e880"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://www.opengis.net/ont/sf#OWLClassImpl_e682d504_4949_4c17_afd5_a8c382eba8a2"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://www.opengis.net/ont/sf#OWLClassImpl_e8bb09bc_9395_4912_96d1_0787fc3991ed"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://www.opengis.net/ont/sf#PolyhedralSurface"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://www.opengis.net/ont/sf#TIN"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="Sloten_casestudy:canopy"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="Sloten_casestudy:facade_outer_wall"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="Sloten_casestudy:facility"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="Sloten_casestudy:function"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="Sloten_casestudy:gable"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="Sloten_casestudy:hamlet"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="Sloten_casestudy:historic_core"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="Sloten_casestudy:masonry"/>
-    </Declaration>
-    <Declaration>
         <Class abbreviatedIRI="Sloten_casestudy:minor_historical_centre"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="Sloten_casestudy:parcel"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="Sloten_casestudy:pavement"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="Sloten_casestudy:storey"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="Sloten_casestudy:structure"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="Sloten_casestudy:structure_not_building"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="Sloten_casestudy:sub_area"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="Sloten_casestudy:village"/>
-    </Declaration>
-    <Declaration>
         <ObjectProperty IRI="#P106_forms_part_of"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#contains"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#has"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#hasGeometry"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#has_a"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#is-a_cultural_centre_0"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#is_a_cultural_centre_1"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#is_located_1"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#is_part_of"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#is_part_of_town"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#is_the_result_of"/>
@@ -606,16 +764,148 @@
         <ObjectProperty IRI="#10_HI_has-part"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#100_SOM_is-observed"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#101_ARV_has-value"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#102_BHV_has-value"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#103_BEV_has-value"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#104_CHV_has-value"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#105_CCV_has-value"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#106_HV_has-value"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#107_VV_has-value"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#108_PCO_live-in"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#109_PBH_designed"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#11_HB_has-part"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#110_CHR_has-reference"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#111_COL_could-be"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#112_SOSF_has"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#113_COUA_is_in"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#114_istheprovinceof"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#115_ismunicipalityfrom"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#116_isinthemunicipalityof"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#117_hasnumber"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#118_arelocatedin"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#119_isin"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#12_HH_has-part"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#120_areinthe"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#121_connect_the"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#122_hasvalue"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#123_hasvalue"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#124_need"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#125_need"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#126_need"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#127_is_related_to"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#128_is_related_to"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#129_is_related_to"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#13_HG_has-part"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#130_islocatedin"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#131_islocatedin"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#132_islocatedin"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#133_have"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#134_has"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#135_arein"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#136_ispartof"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#137_isinthemunicipalityof"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#138_isinthemunicipalityof"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#139_include"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#14_HT_has-part"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#140_islocatedin"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#141_isinthemunicipalityof"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#142_isintheRegion"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#143_isintheprovince"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#15_is_characterised_by_a"/>
@@ -678,6 +968,12 @@
         <ObjectProperty IRI="#34_BW_has-part"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#36_HNF_has-part"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#37_BBS_bounds"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#38_UU_has-part"/>
     </Declaration>
     <Declaration>
@@ -705,9 +1001,6 @@
         <ObjectProperty IRI="#46_BE_has-part"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#46_MH_has-part"/>
-    </Declaration>
-    <Declaration>
         <ObjectProperty IRI="#47_BE_has-part"/>
     </Declaration>
     <Declaration>
@@ -726,10 +1019,142 @@
         <ObjectProperty IRI="#52_CO_has-part"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="http://www.cidoc-crm.org/cidoc-crm/OWLObjectPropertyImpl_2029b97c_777d_4fa8_8868_717d3081a870"/>
+        <ObjectProperty IRI="#53_SL_accompanying"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="http://www.cidoc-crm.org/cidoc-crm/OWLObjectPropertyImpl_54613684_8fff_4967_848a_2a7e60a102ce"/>
+        <ObjectProperty IRI="#55_MH_has-part"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#56_SSNB_connected_to"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#57_MB_consist_of_bricks"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#58_FD_consist_of_door"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#60_WM_consist_of_masonry"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#61_FW_consist_of_wall"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#62_FW_consist_of_window"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#63_ABP_consistsOfBuildingPart"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#64_BERS_consit_of_roof"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#65_BS_consist_of"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#66_PCO_contains"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#67_PLU_corresponto-to"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#68_WG_decorated_with"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#69_BPP_footprint"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#70_SOG_has"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#71_COUS_has_a"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#72_BC_has_construction_time/year"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#73_LUF_has_function"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#74_BF_has_function"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#75_BGH_has_gutter_height"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#76_VHC_has-part"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#77_HHC_has-part"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#78_HCSA_has-part"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#79_HMHC_has-part"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#80_VMHC_has-part"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#81_BBP_has-part"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#82_VB_has-part"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#83_VSA_has-part"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#84_COG_hasGeometry"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#85_LUP_haspattern"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#86_BCC_is-a_cultural_centre"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#87_TP_is_in"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#88_COP_is_in"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#89_WOLU_is_in"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#90_VOLU_is_in"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#91_SP_is_located"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#92_SCO_is_located"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#93_HCCO_is_part_of"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#94_NCO_is_part_of_city"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#95_BSA_located-in"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#96_VRA_located-in"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#97_HRA_located-in"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#98_BSO_opening"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#99_COC_is_located_in"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.cidoc-crm.org/cidoc-crm/OWLObjectPropertyImpl_2029b97c_777d_4fa8_8868_717d3081a870"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="http://www.cidoc-crm.org/cidoc-crm/OWLObjectPropertyImpl_721da535_b86a_4e92_9e29_5ec41955b2b8"/>
@@ -784,9 +1209,6 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="http://www.cidoc-crm.org/cidoc-crm/P122_borders_with"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://www.cidoc-crm.org/cidoc-crm/P128i_is_carried_by"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="http://www.cidoc-crm.org/cidoc-crm/P129_is_about"/>
@@ -849,12 +1271,6 @@
         <ObjectProperty IRI="http://www.cidoc-crm.org/cidoc-crm/P48_has_preferred_identifier"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="http://www.cidoc-crm.org/cidoc-crm/P53_has_former_or_current_location"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://www.cidoc-crm.org/cidoc-crm/P53i_is_former_or_current_location_of"/>
-    </Declaration>
-    <Declaration>
         <ObjectProperty IRI="http://www.cidoc-crm.org/cidoc-crm/P54_has_current_permanent_location"/>
     </Declaration>
     <Declaration>
@@ -903,9 +1319,6 @@
         <ObjectProperty IRI="http://www.cidoc-crm.org/cidoc-crm/P89i_contains"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="http://www.cidoc-crm.org/cidoc-crm/P8_took_place_on_or_within"/>
-    </Declaration>
-    <Declaration>
         <ObjectProperty IRI="http://www.cidoc-crm.org/cidoc-crm/P9_consists_of"/>
     </Declaration>
     <Declaration>
@@ -945,12 +1358,6 @@
         <ObjectProperty IRI="http://www.ics.forth.gr/isl/CRMgeo/Q1i_is_occupied_by"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="http://www.ics.forth.gr/isl/CRMgeo/Q2_occupied"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://www.ics.forth.gr/isl/CRMgeo/Q2i_is_occupied_by"/>
-    </Declaration>
-    <Declaration>
         <ObjectProperty IRI="http://www.ics.forth.gr/isl/CRMgeo/Q4_has_spatial_projection"/>
     </Declaration>
     <Declaration>
@@ -963,118 +1370,19 @@
         <ObjectProperty IRI="http://www.ics.forth.gr/isl/CRMgeo/Q8i_fixes"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="http://www.opengis.net/citygml/bridge/2.0/boundedBy"/>
+        <ObjectProperty IRI="http://www.opengis.net/citygml/bridge/2.0/54_BCBS_boundedBy"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="http://www.opengis.net/citygml/bridge/2.0/opening"/>
+        <ObjectProperty IRI="http://www.semanticweb.org/elisabetta/ontologies/2021/3/Sloten_casestudy#59_BF_consist_of_facade"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="http://www.opengis.net/citygml/building/2.0/consistsOfBuildingPart"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="Sloten_casestudy:OWLObjectPropertyImpl_bec977cb_9535_4c9d_989a_b3004a4e6cb6"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="Sloten_casestudy:accompanying"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="Sloten_casestudy:bounds"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="Sloten_casestudy:consist_of"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="Sloten_casestudy:consist_of_bricks"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="Sloten_casestudy:consist_of_door"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="Sloten_casestudy:consist_of_facade"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="Sloten_casestudy:consist_of_masonry"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="Sloten_casestudy:consist_of_wall"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="Sloten_casestudy:consist_of_window"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="Sloten_casestudy:consit_of_roof"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="Sloten_casestudy:corresponto-to"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="Sloten_casestudy:decorated_with"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="Sloten_casestudy:footprint"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="Sloten_casestudy:has_function"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="Sloten_casestudy:has_function_1"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="Sloten_casestudy:has_gutter_height"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="Sloten_casestudy:has_part_10"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="Sloten_casestudy:has_part_11"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="Sloten_casestudy:has_part_12"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="Sloten_casestudy:has_part_13"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="Sloten_casestudy:has_part_14"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="Sloten_casestudy:has_part_15"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="Sloten_casestudy:has_part_8"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="Sloten_casestudy:hasd_part_9"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="Sloten_casestudy:is_in"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="Sloten_casestudy:is_in_1"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="Sloten_casestudy:is_in_2"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="Sloten_casestudy:is_in_3"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="Sloten_casestudy:is_located"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="Sloten_casestudy:located_in"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="Sloten_casestudy:located_in_1"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="Sloten_casestudy:located_in_2"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://www.semanticweb.org/elisabetta/ontologies/2021/3/Sloten_casestudy#has_construction_time/year"/>
+        <DataProperty IRI="#abandouned"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#above_ground"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#ancient"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#below_ground"/>
@@ -1089,7 +1397,13 @@
         <DataProperty IRI="#duration"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="#historical"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="#new"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#number"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#old"/>
@@ -1128,10 +1442,61 @@
         <DataProperty abbreviatedIRI="skos:OWLDataPropertyImpl_9a312573_fd8a_4997_a91a_4dc4eebeea7f"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Becket_School"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#DE_FRYSKE_MARREN"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Frisian"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#GAASTERLÂN-SLEAT"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Piedmont"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Pomieri"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Prali"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Sub_Area_A"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Turin"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Val_Germanasca"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#sloten_SubAreaA_window"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#1984"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#2_to_3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Ambito/Area_41"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual abbreviatedIRI="Sloten_casestudy:Meeting_function"/>
     </Declaration>
     <Declaration>
         <NamedIndividual abbreviatedIRI="Sloten_casestudy:Sloten"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://ainf.aau.at/ontodebug#axiom"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://ainf.aau.at/ontodebug#testCase"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://ainf.aau.at/ontodebug#type"/>
     </Declaration>
     <Declaration>
         <AnnotationProperty abbreviatedIRI="dc:contributor"/>
@@ -1167,15 +1532,6 @@
         <AnnotationProperty abbreviatedIRI="skos:scopeNote"/>
     </Declaration>
     <Declaration>
-        <Datatype IRI="#givingShelter"/>
-    </Declaration>
-    <Declaration>
-        <Datatype IRI="#permanent"/>
-    </Declaration>
-    <Declaration>
-        <Datatype IRI="#substantial"/>
-    </Declaration>
-    <Declaration>
         <Datatype IRI="http://www.opengis.net/ont/geosparql#gmlLiteral"/>
     </Declaration>
     <Declaration>
@@ -1185,44 +1541,32 @@
         <Datatype abbreviatedIRI="xsd:date"/>
     </Declaration>
     <EquivalentClasses>
-        <Class IRI="#Activity"/>
-        <Class IRI="http://www.cidoc-crm.org/cidoc-crm/OWLClassImpl_2bf56bde_2a82_4282_99c6_b12d53fbd210"/>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="#Built_environment"/>
-        <Class IRI="#built_heritage"/>
-    </EquivalentClasses>
-    <EquivalentClasses>
         <Class IRI="#Geometry"/>
         <Class IRI="http://www.ics.forth.gr/isl/CRMgeo/SP15_Geometry"/>
     </EquivalentClasses>
     <EquivalentClasses>
-        <Class IRI="#Historic_town"/>
+        <Class IRI="#Historical_town"/>
         <Class IRI="#Urban_area"/>
     </EquivalentClasses>
     <EquivalentClasses>
-        <Class IRI="#Historic_town"/>
+        <Class IRI="#Historical_town"/>
         <Class IRI="#historical_city"/>
     </EquivalentClasses>
     <EquivalentClasses>
-        <Class IRI="#Historic_urban_landscape"/>
-        <Class IRI="#historical_landscape"/>
+        <Class IRI="#Spatial_organisation"/>
+        <Class IRI="#Spatial_structure"/>
     </EquivalentClasses>
     <EquivalentClasses>
-        <Class IRI="#city"/>
-        <Class IRI="http://www.opengis.net/citygml/2.0/_CityObject"/>
+        <Class IRI="#Urban_area"/>
+        <Class IRI="#historical_city"/>
     </EquivalentClasses>
     <EquivalentClasses>
-        <Class IRI="#historical_centre"/>
-        <Class IRI="#historical_core"/>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="#historical_centre"/>
-        <Class IRI="#urban_centre"/>
+        <Class IRI="#alpine_settlement"/>
+        <Class IRI="#mountain_hamlet"/>
     </EquivalentClasses>
     <SubClassOf>
         <Class IRI="#Abandoned_building"/>
-        <Class IRI="#Historic_building"/>
+        <Class IRI="#Historical_building"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Architectural_element"/>
@@ -1253,6 +1597,14 @@
         <Class IRI="http://www.opengis.net/citygml/building/2.0/_Building"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Built_environment"/>
+        <Class IRI="#built_heritage"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Built_environment"/>
+        <Class IRI="#environment"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Church"/>
         <Class IRI="http://www.opengis.net/citygml/building/2.0/_Building"/>
     </SubClassOf>
@@ -1261,16 +1613,32 @@
         <Class IRI="http://www.opengis.net/citygml/building/2.0/_Building"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Historic_building"/>
+        <Class IRI="#Garden"/>
+        <Class IRI="http://www.opengis.net/citygml/2.0/_CityObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Historical_building"/>
         <Class IRI="http://www.opengis.net/citygml/building/2.0/_Building"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Historic_urban_landscape"/>
+        <Class IRI="#Historical_town"/>
+        <Class IRI="#Built_environment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Historical_urban_landscape"/>
+        <Class IRI="#Historical_town"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Historical_urban_landscape"/>
         <Class IRI="#Landscape"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Historic_urban_landscape"/>
+        <Class IRI="#Historical_urban_landscape"/>
         <Class IRI="#Urban_area"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Historical_urban_landscape"/>
+        <Class IRI="#historical_city"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#House"/>
@@ -1279,6 +1647,10 @@
     <SubClassOf>
         <Class IRI="#Line"/>
         <Class IRI="http://www.opengis.net/ont/sf#LineString"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Man-made_context"/>
+        <Class IRI="http://www.cidoc-crm.org/cidoc-crm/E71_Man-Made_Thing"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Neighbourhood"/>
@@ -1301,6 +1673,14 @@
         <Class IRI="http://www.opengis.net/citygml/building/2.0/_Building"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Tangible_element"/>
+        <Class IRI="http://www.cidoc-crm.org/cidoc-crm/E71_Man-Made_Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Urban_area"/>
+        <Class IRI="#Built_environment"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Warehouse"/>
         <Class IRI="http://www.opengis.net/citygml/building/2.0/_Building"/>
     </SubClassOf>
@@ -1309,52 +1689,308 @@
         <Class IRI="#historical_centre"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#alpine_core"/>
+        <Class IRI="#hamlet"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#alpine_environment"/>
+        <Class IRI="#environment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#alpine_settlement"/>
+        <Class IRI="#hamlet"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#architectural_heritage"/>
+        <Class IRI="#cultural_heritage"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#architectural_heritage"/>
         <Class IRI="http://www.cidoc-crm.org/cidoc-crm/E24_Physical_Human-Made_Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#avalanche"/>
+        <Class IRI="#natural"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axex"/>
+        <Class IRI="http://www.opengis.net/citygml/2.0/_CityObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axex"/>
+        <Class IRI="http://www.opengis.net/citygml/transportation/2.0/_TransportationObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#biomass"/>
+        <Class IRI="#energy"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#building_plot"/>
         <Class IRI="http://www.opengis.net/citygml/bridge/2.0/_BoundarySurface"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#built_heritage"/>
+        <Class IRI="#architectural_heritage"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#canopy"/>
+        <Class IRI="#structure_not_building"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#central_city"/>
+        <Class IRI="http://www.opengis.net/citygml/2.0/_CityObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#church"/>
+        <Class IRI="#pole_of_religiosity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#cityscape"/>
+        <Class IRI="#Landscape"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#citywall"/>
+        <Class IRI="http://www.opengis.net/citygml/2.0/_CityObject"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#construction_area"/>
         <Class IRI="http://www.opengis.net/citygml/bridge/2.0/_BoundarySurface"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#cultural_heritage"/>
+        <Class IRI="#Heritage"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#earthquake"/>
+        <Class IRI="#natural"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#energy"/>
+        <Class IRI="#net"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#facility"/>
+        <Class IRI="#structure_not_building"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#family"/>
+        <Class IRI="#population"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#fortification_line"/>
+        <Class IRI="#historical_naturalistic_heritage"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#fountain"/>
+        <Class IRI="http://www.opengis.net/citygml/2.0/_CityObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#geotermal"/>
+        <Class IRI="#energy"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#group_of_buildings"/>
         <Class IRI="#cultural_heritage"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#historical_landscape"/>
-        <Class IRI="#Landscape"/>
+        <Class IRI="#historical_city"/>
+        <Class IRI="#Built_environment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#historical_city"/>
+        <Class IRI="#Urban_area"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#historical_naturalistic_heritage"/>
+        <Class IRI="#cultural_heritage"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#historical_quarter"/>
+        <Class IRI="#Historical_town"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#historical_quarter"/>
+        <Class IRI="#Urban_area"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#historical_quarter"/>
         <Class IRI="#historical_city"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#historical_urban_centre"/>
+        <Class IRI="#historical_centre"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#hydric"/>
+        <Class IRI="#energy"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#inhabitant"/>
+        <Class IRI="#population"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#intangible_cultural_heritage"/>
         <Class IRI="#cultural_heritage"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#landscape_area"/>
+        <Class IRI="#Landscape"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#landscape_cultural_heritage"/>
+        <Class IRI="#Landscape"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#landscape_cultural_heritage"/>
         <Class IRI="#cultural_heritage"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#landscape_unity"/>
+        <Class IRI="#landscape_area"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#landslide"/>
+        <Class IRI="#natural"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#maintenance"/>
+        <Class IRI="#protection"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#man-made"/>
+        <Class IRI="#risk_hazard"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#military_structure"/>
+        <Class IRI="#structure_not_building"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#mine"/>
+        <Class IRI="#Infrastructure"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#monument"/>
         <Class IRI="#cultural_heritage"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#mountain_hamlet"/>
+        <Class IRI="#hamlet"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#mule_track"/>
+        <Class IRI="http://www.opengis.net/citygml/transportation/2.0/_TransportationObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#municipality"/>
+        <Class IRI="http://www.opengis.net/citygml/2.0/_CityObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#natural"/>
+        <Class IRI="#risk_hazard"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#natural_park"/>
+        <Class IRI="#subAlpine_forest"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#pole_of_religiosity"/>
+        <Class IRI="#historical_naturalistic_heritage"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#regional_territory"/>
+        <Class IRI="#territory"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#renewable"/>
+        <Class IRI="#energy"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#rural_area"/>
         <Class IRI="#Built_environment"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#school"/>
+        <Class IRI="http://www.opengis.net/citygml/building/2.0/_Building"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#site"/>
         <Class IRI="#cultural_heritage"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#small_town"/>
+        <Class IRI="#Historical_town"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#small_town"/>
+        <Class IRI="#Urban_area"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#small_town"/>
+        <Class IRI="#historical_city"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#solar"/>
+        <Class IRI="#energy"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#stone_house"/>
+        <Class IRI="http://www.opengis.net/citygml/building/2.0/_Building"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#sub_area"/>
+        <Class IRI="#Historical_town"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#sub_area"/>
+        <Class IRI="#Urban_area"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#sub_area"/>
+        <Class IRI="#historical_city"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#sub_area"/>
+        <Class IRI="#rural_area"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#suburb"/>
+        <Class IRI="#Historical_town"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#suburb"/>
+        <Class IRI="#Urban_area"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#suburb"/>
+        <Class IRI="#historical_city"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#territory"/>
+        <Class IRI="http://www.cidoc-crm.org/cidoc-crm/OWLClassImpl_feff65e1_fb4c_4b3d_aad2_4a884ab0574a"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#visual_relationship"/>
+        <Class IRI="#historical_naturalistic_heritage"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#wind"/>
+        <Class IRI="#energy"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#wireless"/>
+        <Class IRI="#net"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#wooden_context"/>
+        <Class IRI="#natural_park"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#yard"/>
         <Class IRI="http://www.opengis.net/citygml/landuse/2.0/LandUse"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Holiday_resort/leisure_centre"/>
+        <Class IRI="#historical_naturalistic_heritage"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="http://www.cidoc-crm.org/cidoc-crm/E14_Condition_Assessment"/>
@@ -1375,6 +2011,10 @@
     <SubClassOf>
         <Class IRI="http://www.cidoc-crm.org/cidoc-crm/E24_Physical_Human-Made_Thing"/>
         <Class IRI="http://www.cidoc-crm.org/cidoc-crm/E71_Man-Made_Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.cidoc-crm.org/cidoc-crm/E26_Physical_Feature"/>
+        <Class IRI="#regional_territory"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="http://www.cidoc-crm.org/cidoc-crm/E28_Conceptual_Object"/>
@@ -1406,6 +2046,18 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object"/>
+        <Class IRI="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object"/>
+        <Class IRI="http://www.cidoc-crm.org/cidoc-crm/E90_Symbolic_Object"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object"/>
+        <Class IRI="http://www.ics.forth.gr/isl/CRMgeo/SP15_Geometry"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object"/>
         <ObjectIntersectionOf>
             <Class IRI="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
             <Class IRI="http://www.cidoc-crm.org/cidoc-crm/E90_Symbolic_Object"/>
@@ -1417,10 +2069,6 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
-        <Class IRI="http://www.cidoc-crm.org/cidoc-crm/E28_Conceptual_Object"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://www.cidoc-crm.org/cidoc-crm/E90_Symbolic_Object"/>
         <Class IRI="http://www.cidoc-crm.org/cidoc-crm/E28_Conceptual_Object"/>
     </SubClassOf>
     <SubClassOf>
@@ -1457,18 +2105,11 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="http://www.ics.forth.gr/isl/CRMgeo/SP12_Spacetime_Volume_Expression"/>
-        <Class IRI="#Geometry"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://www.ics.forth.gr/isl/CRMgeo/SP12_Spacetime_Volume_Expression"/>
         <Class IRI="http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="http://www.ics.forth.gr/isl/CRMgeo/SP14_Time_Expression"/>
-        <ObjectIntersectionOf>
-            <Class IRI="#Geometry"/>
-            <Class IRI="http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object"/>
-        </ObjectIntersectionOf>
+        <Class IRI="http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="http://www.ics.forth.gr/isl/CRMgeo/SP2_Phenomenal_Place"/>
@@ -1489,6 +2130,10 @@
     <SubClassOf>
         <Class IRI="http://www.ics.forth.gr/isl/CRMgeo/SP7_Declarative_Spacetime_Volume"/>
         <Class IRI="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.ics.forth.gr/isl/CRMgeo/SP7_Declarative_Spacetime_Volume"/>
+        <Class IRI="http://www.ics.forth.gr/isl/CRMgeo/SP15_Geometry"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="http://www.ics.forth.gr/isl/CRMgeo/#SP1_Phenomenal_Spacetime_Volume"/>
@@ -1540,6 +2185,18 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="http://www.opengis.net/citygml/building/2.0/_Building"/>
+        <Class IRI="#Infrastructure"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.opengis.net/citygml/building/2.0/_Building"/>
+        <Class IRI="#architectural_heritage"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.opengis.net/citygml/building/2.0/_Building"/>
+        <Class IRI="#built_heritage"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.opengis.net/citygml/building/2.0/_Building"/>
         <Class IRI="http://www.opengis.net/citygml/building/2.0/_AbstractBuilding"/>
     </SubClassOf>
     <SubClassOf>
@@ -1549,6 +2206,10 @@
     <SubClassOf>
         <Class IRI="http://www.opengis.net/citygml/landuse/2.0/LandUse"/>
         <Class IRI="http://www.opengis.net/citygml/2.0/_CityObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.opengis.net/citygml/transportation/2.0/_TransportationObject"/>
+        <Class IRI="#Infrastructure"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="http://www.opengis.net/citygml/transportation/2.0/_TransportationObject"/>
@@ -1576,11 +2237,15 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="http://www.opengis.net/ont/geosparql#Feature"/>
-        <Class IRI="http://www.opengis.net/ont/geosparql#OWLClassImpl_f9b6c875_baa3_4571_905a_d21aa57166d9"/>
+        <Class IRI="#Landmark_site"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="http://www.opengis.net/ont/sf#Curve"/>
         <Class IRI="#Geometry"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.opengis.net/ont/sf#Curve"/>
+        <Class IRI="http://www.ics.forth.gr/isl/CRMgeo/SP15_Geometry"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="http://www.opengis.net/ont/sf#GeometryCollection"/>
@@ -1619,28 +2284,8 @@
         <Class IRI="#Geometry"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://www.opengis.net/ont/sf#OWLClassImpl_b6007aec_2881_4cae_84cf_26957298e880"/>
-        <Class IRI="http://www.opengis.net/ont/sf#OWLClassImpl_e8bb09bc_9395_4912_96d1_0787fc3991ed"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://www.opengis.net/ont/sf#OWLClassImpl_e8bb09bc_9395_4912_96d1_0787fc3991ed"/>
-        <Class IRI="http://www.opengis.net/ont/sf#OWLClassImpl_e682d504_4949_4c17_afd5_a8c382eba8a2"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://www.opengis.net/ont/sf#PolyhedralSurface"/>
-        <Class IRI="http://www.opengis.net/ont/sf#OWLClassImpl_e682d504_4949_4c17_afd5_a8c382eba8a2"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://www.opengis.net/ont/sf#TIN"/>
-        <Class IRI="http://www.opengis.net/ont/sf#PolyhedralSurface"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="Sloten_casestudy:canopy"/>
-        <Class abbreviatedIRI="Sloten_casestudy:structure_not_building"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="Sloten_casestudy:facility"/>
-        <Class abbreviatedIRI="Sloten_casestudy:structure_not_building"/>
+        <Class IRI="http://www.opengis.net/ont/sf#OWLClassImpl_b354a948_5e9c_4dd6_b88d_40c99501781f"/>
+        <Class IRI="http://www.ics.forth.gr/isl/CRMgeo/SP15_Geometry"/>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="Sloten_casestudy:minor_historical_centre"/>
@@ -1651,22 +2296,167 @@
         <Class IRI="http://www.opengis.net/citygml/transportation/2.0/_TransportationObject"/>
     </SubClassOf>
     <ClassAssertion>
-        <Class abbreviatedIRI="Sloten_casestudy:function"/>
+        <Class IRI="#school"/>
+        <NamedIndividual IRI="#Becket_School"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.cidoc-crm.org/cidoc-crm/OWLClassImpl_feff65e1_fb4c_4b3d_aad2_4a884ab0574a"/>
+        <NamedIndividual IRI="#DE_FRYSKE_MARREN"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.cidoc-crm.org/cidoc-crm/OWLClassImpl_feff65e1_fb4c_4b3d_aad2_4a884ab0574a"/>
+        <NamedIndividual IRI="#Frisian"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.cidoc-crm.org/cidoc-crm/OWLClassImpl_feff65e1_fb4c_4b3d_aad2_4a884ab0574a"/>
+        <NamedIndividual IRI="#GAASTERLÂN-SLEAT"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#regional_territory"/>
+        <NamedIndividual IRI="#Piedmont"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#alpine_settlement"/>
+        <NamedIndividual IRI="#Pomieri"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#mountain_hamlet"/>
+        <NamedIndividual IRI="#Pomieri"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Sloten_casestudy:minor_historical_centre"/>
+        <NamedIndividual IRI="#Pomieri"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Sloten_casestudy:minor_historical_centre"/>
+        <NamedIndividual IRI="#Prali"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#sub_area"/>
+        <NamedIndividual IRI="#Sub_Area_A"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.opengis.net/citygml/2.0/_CityObject"/>
+        <NamedIndividual IRI="#Turin"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.cidoc-crm.org/cidoc-crm/OWLClassImpl_feff65e1_fb4c_4b3d_aad2_4a884ab0574a"/>
+        <NamedIndividual IRI="#Val_Germanasca"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.opengis.net/citygml/bridge/2.0/Window"/>
+        <NamedIndividual IRI="#sloten_SubAreaA_window"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span"/>
+        <NamedIndividual IRI="#1984"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.opengis.net/citygml/bridge/2.0/Window"/>
+        <NamedIndividual IRI="#2_to_3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#number"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+        <NamedIndividual IRI="#2_to_3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#landscape_area"/>
+        <NamedIndividual IRI="#Ambito/Area_41"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#function"/>
         <NamedIndividual abbreviatedIRI="Sloten_casestudy:Meeting_function"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class abbreviatedIRI="Sloten_casestudy:village"/>
+        <Class IRI="#citywall"/>
         <NamedIndividual abbreviatedIRI="Sloten_casestudy:Sloten"/>
     </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#historical_centre"/>
+        <NamedIndividual abbreviatedIRI="Sloten_casestudy:Sloten"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#village"/>
+        <NamedIndividual abbreviatedIRI="Sloten_casestudy:Sloten"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#114_istheprovinceof"/>
+        <NamedIndividual IRI="#Frisian"/>
+        <NamedIndividual abbreviatedIRI="Sloten_casestudy:Sloten"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#141_isinthemunicipalityof"/>
+        <NamedIndividual IRI="#Pomieri"/>
+        <NamedIndividual IRI="#Prali"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#140_islocatedin"/>
+        <NamedIndividual IRI="#Prali"/>
+        <NamedIndividual IRI="#Val_Germanasca"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#142_isintheRegion"/>
+        <NamedIndividual IRI="#Prali"/>
+        <NamedIndividual IRI="#Piedmont"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#143_isintheprovince"/>
+        <NamedIndividual IRI="#Prali"/>
+        <NamedIndividual IRI="#Turin"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#136_ispartof"/>
+        <NamedIndividual IRI="#Sub_Area_A"/>
+        <NamedIndividual abbreviatedIRI="Sloten_casestudy:Sloten"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#117_hasnumber"/>
+        <NamedIndividual IRI="#sloten_SubAreaA_window"/>
+        <NamedIndividual IRI="#2_to_3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#139_include"/>
+        <NamedIndividual IRI="#Ambito/Area_41"/>
+        <NamedIndividual IRI="#Val_Germanasca"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#115_ismunicipalityfrom"/>
+        <NamedIndividual abbreviatedIRI="Sloten_casestudy:Sloten"/>
+        <NamedIndividual IRI="#1984"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#137_isinthemunicipalityof"/>
+        <NamedIndividual abbreviatedIRI="Sloten_casestudy:Sloten"/>
+        <NamedIndividual IRI="#GAASTERLÂN-SLEAT"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#138_isinthemunicipalityof"/>
+        <NamedIndividual abbreviatedIRI="Sloten_casestudy:Sloten"/>
+        <NamedIndividual IRI="#DE_FRYSKE_MARREN"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Sloten_casestudy:toponym"/>
+        <NamedIndividual IRI="#DE_FRYSKE_MARREN"/>
+        <Literal>DE FRYSKE MARREN</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Sloten_casestudy:toponym"/>
+        <NamedIndividual IRI="#Frisian"/>
+        <Literal>Frisia</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Sloten_casestudy:toponym"/>
+        <NamedIndividual IRI="#GAASTERLÂN-SLEAT"/>
+        <Literal>GAASTERLÂN-SLEAT</Literal>
+    </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty abbreviatedIRI="Sloten_casestudy:toponym"/>
         <NamedIndividual abbreviatedIRI="Sloten_casestudy:Sloten"/>
         <Literal>Sloten</Literal>
     </DataPropertyAssertion>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="#contains"/>
-        <ObjectProperty IRI="#05_HP_has-part"/>
-    </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="http://www.cidoc-crm.org/cidoc-crm/P129_is_about"/>
         <ObjectProperty IRI="http://www.cidoc-crm.org/cidoc-crm/P67_refers_to"/>
@@ -1684,14 +2474,6 @@
         <ObjectProperty IRI="http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="http://www.cidoc-crm.org/cidoc-crm/P55_has_current_location"/>
-        <ObjectProperty IRI="http://www.cidoc-crm.org/cidoc-crm/P53_has_former_or_current_location"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="http://www.cidoc-crm.org/cidoc-crm/P55i_currently_holds"/>
-        <ObjectProperty IRI="http://www.cidoc-crm.org/cidoc-crm/P53i_is_former_or_current_location_of"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
         <ObjectProperty IRI="http://www.cidoc-crm.org/cidoc-crm/P87i_identifies"/>
         <ObjectProperty IRI="http://www.cidoc-crm.org/cidoc-crm/P1i_identifies"/>
     </SubObjectPropertyOf>
@@ -1702,10 +2484,6 @@
     <InverseObjectProperties>
         <ObjectProperty IRI="http://www.cidoc-crm.org/cidoc-crm/OWLObjectPropertyImpl_2029b97c_777d_4fa8_8868_717d3081a870"/>
         <ObjectProperty IRI="http://www.cidoc-crm.org/cidoc-crm/P156i_is_occupied_by"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="http://www.cidoc-crm.org/cidoc-crm/OWLObjectPropertyImpl_54613684_8fff_4967_848a_2a7e60a102ce"/>
-        <ObjectProperty IRI="http://www.cidoc-crm.org/cidoc-crm/P128i_is_carried_by"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
         <ObjectProperty IRI="http://www.cidoc-crm.org/cidoc-crm/OWLObjectPropertyImpl_721da535_b86a_4e92_9e29_5ec41955b2b8"/>
@@ -1756,10 +2534,6 @@
         <ObjectProperty IRI="http://www.cidoc-crm.org/cidoc-crm/P35i_was_identified_by"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="http://www.cidoc-crm.org/cidoc-crm/P53_has_former_or_current_location"/>
-        <ObjectProperty IRI="http://www.cidoc-crm.org/cidoc-crm/P53i_is_former_or_current_location_of"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
         <ObjectProperty IRI="http://www.cidoc-crm.org/cidoc-crm/P54_has_current_permanent_location"/>
         <ObjectProperty IRI="http://www.cidoc-crm.org/cidoc-crm/P54i_is_current_permanent_location_of"/>
     </InverseObjectProperties>
@@ -1804,10 +2578,6 @@
         <ObjectProperty IRI="http://www.ics.forth.gr/isl/CRMgeo/Q1i_is_occupied_by"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="http://www.ics.forth.gr/isl/CRMgeo/Q2_occupied"/>
-        <ObjectProperty IRI="http://www.ics.forth.gr/isl/CRMgeo/Q2i_is_occupied_by"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
         <ObjectProperty IRI="http://www.ics.forth.gr/isl/CRMgeo/Q4_has_spatial_projection"/>
         <ObjectProperty IRI="http://www.ics.forth.gr/isl/CRMgeo/Q4i_is_spatial_projection"/>
     </InverseObjectProperties>
@@ -1820,52 +2590,16 @@
         <Class IRI="http://www.cidoc-crm.org/cidoc-crm/E90_Symbolic_Object"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#contains"/>
-        <Class IRI="http://www.cidoc-crm.org/cidoc-crm/OWLClassImpl_feff65e1_fb4c_4b3d_aad2_4a884ab0574a"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#has"/>
-        <Class IRI="http://www.opengis.net/ont/geosparql#OWLClassImpl_f9b6c875_baa3_4571_905a_d21aa57166d9"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasGeometry"/>
-        <Class IRI="http://www.opengis.net/citygml/2.0/_CityObject"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#has_a"/>
-        <Class IRI="http://www.opengis.net/citygml/2.0/_CityObject"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#is-a_cultural_centre_0"/>
-        <Class IRI="http://www.opengis.net/citygml/building/2.0/_Building"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#is_a_cultural_centre_1"/>
-        <Class IRI="http://www.opengis.net/citygml/building/2.0/_Building"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#is_located_1"/>
-        <Class IRI="http://www.opengis.net/citygml/2.0/_Site"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#is_part_of"/>
-        <Class IRI="#historical_city"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#is_part_of_town"/>
-        <Class IRI="#Neighbourhood"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
         <ObjectProperty IRI="#is_the_result_of"/>
-        <Class IRI="#Historic_urban_landscape"/>
+        <Class IRI="#Historical_urban_landscape"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#01_HH_has-part"/>
-        <Class IRI="#Historic_urban_landscape"/>
+        <Class IRI="#Historical_urban_landscape"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#02_HE_has-part"/>
-        <Class IRI="#Historic_urban_landscape"/>
+        <Class IRI="#Historical_urban_landscape"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#03_IS_has-part"/>
@@ -1873,67 +2607,203 @@
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#04_HV_has-part"/>
-        <Class IRI="#Historic_urban_landscape"/>
+        <Class IRI="#Historical_urban_landscape"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#05_HP_has-part"/>
-        <Class IRI="#Historic_urban_landscape"/>
+        <Class IRI="#Historical_urban_landscape"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#06_HS_has-part"/>
-        <Class IRI="#Historic_urban_landscape"/>
+        <Class IRI="#Historical_urban_landscape"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#07_HL_has-part"/>
-        <Class IRI="#Historic_urban_landscape"/>
+        <Class IRI="#Historical_urban_landscape"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#08_HG_has-part"/>
-        <Class IRI="#Historic_urban_landscape"/>
+        <Class IRI="#Historical_urban_landscape"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#09_HO_has-part"/>
-        <Class IRI="#Historic_urban_landscape"/>
+        <Class IRI="#Historical_urban_landscape"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#10_HI_has-part"/>
-        <Class IRI="#Historic_urban_landscape"/>
+        <Class IRI="#Historical_urban_landscape"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#100_SOM_is-observed"/>
+        <Class IRI="http://www.opengis.net/ont/geosparql#OWLClassImpl_f9b6c875_baa3_4571_905a_d21aa57166d9"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#101_ARV_has-value"/>
+        <Class IRI="#Archaeological_remain"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#102_BHV_has-value"/>
+        <Class IRI="#built_heritage"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#103_BEV_has-value"/>
+        <Class IRI="#Built_environment"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#104_CHV_has-value"/>
+        <Class IRI="#cultural_heritage"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#105_CCV_has-value"/>
+        <Class IRI="#cultural_centre"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#106_HV_has-value"/>
+        <Class IRI="#hamlet"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#107_VV_has-value"/>
+        <Class IRI="#village"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#108_PCO_live-in"/>
+        <Class IRI="http://www.cidoc-crm.org/cidoc-crm/E21_Person"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#109_PBH_designed"/>
+        <Class IRI="http://www.cidoc-crm.org/cidoc-crm/E21_Person"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#11_HB_has-part"/>
-        <Class IRI="#Historic_urban_landscape"/>
+        <Class IRI="#Historical_urban_landscape"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#110_CHR_has-reference"/>
+        <Class IRI="#cultural_heritage"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#111_COL_could-be"/>
+        <Class IRI="http://www.opengis.net/citygml/2.0/_CityObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#112_SOSF_has"/>
+        <Class IRI="http://www.cidoc-crm.org/cidoc-crm/E90_Symbolic_Object"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#113_COUA_is_in"/>
+        <Class IRI="http://www.opengis.net/citygml/2.0/_CityObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#118_arelocatedin"/>
+        <Class IRI="#hamlet"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#119_isin"/>
+        <Class IRI="#subAlpine_forest"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#12_HH_has-part"/>
-        <Class IRI="#Historic_urban_landscape"/>
+        <Class IRI="#Historical_urban_landscape"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#120_areinthe"/>
+        <Class IRI="#landscape_area"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#121_connect_the"/>
+        <Class IRI="#mule_track"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#122_hasvalue"/>
+        <Class IRI="#alpine_environment"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#123_hasvalue"/>
+        <Class IRI="#historical_naturalistic_heritage"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#124_need"/>
+        <Class IRI="#Heritage"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#125_need"/>
+        <Class IRI="#Heritage"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#126_need"/>
+        <Class IRI="#Heritage"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#127_is_related_to"/>
+        <Class IRI="#risk_hazard"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#128_is_related_to"/>
+        <Class IRI="#risk_hazard"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#129_is_related_to"/>
+        <Class IRI="#risk_hazard"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#13_HG_has-part"/>
-        <Class IRI="#Historic_urban_landscape"/>
+        <Class IRI="#Historical_urban_landscape"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#130_islocatedin"/>
+        <Class IRI="#oven"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#131_islocatedin"/>
+        <Class IRI="#sundial"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#132_islocatedin"/>
+        <Class IRI="#fountain"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#133_have"/>
+        <Class IRI="#hamlet"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#134_has"/>
+        <Class IRI="#high_alpine_area"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#135_arein"/>
+        <Class IRI="#museum"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#14_HT_has-part"/>
-        <Class IRI="#Historic_urban_landscape"/>
+        <Class IRI="#Historical_urban_landscape"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#15_is_characterised_by_a"/>
-        <Class IRI="#Historic_town"/>
+        <Class IRI="#Historical_town"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#15_is_characterised_by_a"/>
+        <Class IRI="#Urban_area"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#15_is_characterised_by_a"/>
+        <Class IRI="#historical_city"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#16_HTM_is-part-of"/>
-        <Class IRI="#Historic_town"/>
+        <Class IRI="#Historical_town"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#17_HTN_is-part-of"/>
-        <Class IRI="#Historic_town"/>
+        <Class IRI="#Historical_town"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#18_HTT_has-part"/>
-        <Class IRI="#Historic_town"/>
+        <Class IRI="#Historical_town"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#19_HTI_has-part"/>
-        <Class IRI="#Historic_town"/>
+        <Class IRI="#Historical_town"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#20_IM_has-part"/>
@@ -1996,8 +2866,16 @@
         <Class IRI="http://www.opengis.net/citygml/building/2.0/_Building"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="#36_HNF_has-part"/>
+        <Class IRI="#Historical_urban_landscape"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#37_BBS_bounds"/>
+        <Class IRI="http://www.opengis.net/citygml/building/2.0/_Building"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#38_UU_has-part"/>
-        <Class IRI="#urban_centre"/>
+        <Class IRI="#historical_urban_centre"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#39_UC_is-part-of"/>
@@ -2032,10 +2910,6 @@
         <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcBuildingElement"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#46_MH_has-part"/>
-        <Class IRI="#monument"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
         <ObjectProperty IRI="#47_BE_has-part"/>
         <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcBuildingElement"/>
     </ObjectPropertyDomain>
@@ -2057,6 +2931,186 @@
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#52_CO_has-part"/>
+        <Class IRI="http://www.opengis.net/citygml/2.0/_CityObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#53_SL_accompanying"/>
+        <Class IRI="#structure"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#55_MH_has-part"/>
+        <Class IRI="#monument"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#56_SSNB_connected_to"/>
+        <Class IRI="#structure"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#57_MB_consist_of_bricks"/>
+        <Class IRI="#masonry"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#58_FD_consist_of_door"/>
+        <Class IRI="#facade_outer_wall"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#60_WM_consist_of_masonry"/>
+        <Class IRI="http://www.opengis.net/citygml/bridge/2.0/WallSurface"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#61_FW_consist_of_wall"/>
+        <Class IRI="#facade_outer_wall"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#62_FW_consist_of_window"/>
+        <Class IRI="#facade_outer_wall"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#63_ABP_consistsOfBuildingPart"/>
+        <Class IRI="http://www.opengis.net/citygml/building/2.0/_AbstractBuilding"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#64_BERS_consit_of_roof"/>
+        <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcBuildingElement"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#65_BS_consist_of"/>
+        <Class IRI="http://www.opengis.net/citygml/building/2.0/_Building"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#66_PCO_contains"/>
+        <Class IRI="http://www.cidoc-crm.org/cidoc-crm/OWLClassImpl_feff65e1_fb4c_4b3d_aad2_4a884ab0574a"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#67_PLU_corresponto-to"/>
+        <Class IRI="#parcel/ground"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#68_WG_decorated_with"/>
+        <Class IRI="http://www.opengis.net/citygml/bridge/2.0/WallSurface"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#69_BPP_footprint"/>
+        <Class IRI="#building_plot"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#70_SOG_has"/>
+        <Class IRI="http://www.opengis.net/ont/geosparql#OWLClassImpl_f9b6c875_baa3_4571_905a_d21aa57166d9"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#71_COUS_has_a"/>
+        <Class IRI="http://www.opengis.net/citygml/2.0/_CityObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#72_BC_has_construction_time/year"/>
+        <Class IRI="http://www.opengis.net/citygml/building/2.0/_Building"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#73_LUF_has_function"/>
+        <Class IRI="http://www.opengis.net/citygml/landuse/2.0/LandUse"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#74_BF_has_function"/>
+        <Class IRI="http://www.opengis.net/citygml/building/2.0/_Building"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#75_BGH_has_gutter_height"/>
+        <Class IRI="http://www.opengis.net/citygml/building/2.0/_Building"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#76_VHC_has-part"/>
+        <Class IRI="#village"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#77_HHC_has-part"/>
+        <Class IRI="#hamlet"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#78_HCSA_has-part"/>
+        <Class IRI="#historical_city_core"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#79_HMHC_has-part"/>
+        <Class IRI="#hamlet"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#80_VMHC_has-part"/>
+        <Class IRI="#village"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#81_BBP_has-part"/>
+        <Class IRI="http://www.opengis.net/citygml/building/2.0/_Building"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#82_VB_has-part"/>
+        <Class IRI="#village"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#83_VSA_has-part"/>
+        <Class IRI="#village"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#84_COG_hasGeometry"/>
+        <Class IRI="http://www.opengis.net/citygml/2.0/_CityObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#85_LUP_haspattern"/>
+        <Class IRI="http://www.opengis.net/citygml/landuse/2.0/LandUse"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#86_BCC_is-a_cultural_centre"/>
+        <Class IRI="http://www.opengis.net/citygml/building/2.0/_Building"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#87_TP_is_in"/>
+        <Class IRI="http://www.opengis.net/citygml/transportation/2.0/_TransportationObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#88_COP_is_in"/>
+        <Class IRI="http://www.opengis.net/citygml/2.0/_CityObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#89_WOLU_is_in"/>
+        <Class IRI="http://www.opengis.net/citygml/waterbody/2.0/_WaterObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#90_VOLU_is_in"/>
+        <Class IRI="http://www.opengis.net/citygml/vegetation/2.0/_VegetationObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#91_SP_is_located"/>
+        <Class IRI="#structure"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#92_SCO_is_located"/>
+        <Class IRI="http://www.opengis.net/citygml/2.0/_Site"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#93_HCCO_is_part_of"/>
+        <Class IRI="#historical_city"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#94_NCO_is_part_of_city"/>
+        <Class IRI="#Neighbourhood"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#95_BSA_located-in"/>
+        <Class IRI="http://www.opengis.net/citygml/building/2.0/_Building"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#96_VRA_located-in"/>
+        <Class IRI="#village"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#97_HRA_located-in"/>
+        <Class IRI="#hamlet"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#98_BSO_opening"/>
+        <Class IRI="http://www.opengis.net/citygml/bridge/2.0/_BoundarySurface"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#99_COC_is_located_in"/>
         <Class IRI="http://www.opengis.net/citygml/2.0/_CityObject"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
@@ -2136,10 +3190,6 @@
         <Class IRI="http://www.cidoc-crm.org/cidoc-crm/OWLClassImpl_feff65e1_fb4c_4b3d_aad2_4a884ab0574a"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="http://www.cidoc-crm.org/cidoc-crm/P128i_is_carried_by"/>
-        <Class IRI="http://www.cidoc-crm.org/cidoc-crm/E90_Symbolic_Object"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
         <ObjectProperty IRI="http://www.cidoc-crm.org/cidoc-crm/P129_is_about"/>
         <Class IRI="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </ObjectPropertyDomain>
@@ -2216,10 +3266,6 @@
         <Class IRI="http://www.cidoc-crm.org/cidoc-crm/E1_CRM_Entity"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="http://www.cidoc-crm.org/cidoc-crm/P53i_is_former_or_current_location_of"/>
-        <Class IRI="http://www.cidoc-crm.org/cidoc-crm/OWLClassImpl_feff65e1_fb4c_4b3d_aad2_4a884ab0574a"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
         <ObjectProperty IRI="http://www.cidoc-crm.org/cidoc-crm/P54_has_current_permanent_location"/>
         <Class IRI="http://www.cidoc-crm.org/cidoc-crm/E19_Physical_Object"/>
     </ObjectPropertyDomain>
@@ -2280,10 +3326,6 @@
         <Class IRI="http://www.cidoc-crm.org/cidoc-crm/OWLClassImpl_feff65e1_fb4c_4b3d_aad2_4a884ab0574a"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="http://www.cidoc-crm.org/cidoc-crm/P8_took_place_on_or_within"/>
-        <Class IRI="http://www.cidoc-crm.org/cidoc-crm/OWLClassImpl_4d19e32a_8119_43bd_ba8d_58b70789cd39"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
         <ObjectProperty IRI="http://www.cidoc-crm.org/cidoc-crm/P9_consists_of"/>
         <Class IRI="http://www.cidoc-crm.org/cidoc-crm/OWLClassImpl_4d19e32a_8119_43bd_ba8d_58b70789cd39"/>
     </ObjectPropertyDomain>
@@ -2336,10 +3378,6 @@
         <Class IRI="http://www.ics.forth.gr/isl/CRMgeo/#SP1_Phenomenal_Spacetime_Volume"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="http://www.ics.forth.gr/isl/CRMgeo/Q2i_is_occupied_by"/>
-        <Class IRI="http://www.ics.forth.gr/isl/CRMgeo/#SP1_Phenomenal_Spacetime_Volume"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
         <ObjectProperty IRI="http://www.ics.forth.gr/isl/CRMgeo/Q4_has_spatial_projection"/>
         <Class IRI="http://www.ics.forth.gr/isl/CRMgeo/#SP1_Phenomenal_Spacetime_Volume"/>
     </ObjectPropertyDomain>
@@ -2356,192 +3394,16 @@
         <Class IRI="http://www.cidoc-crm.org/cidoc-crm/E26_Physical_Feature"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="http://www.opengis.net/citygml/bridge/2.0/boundedBy"/>
+        <ObjectProperty IRI="http://www.opengis.net/citygml/bridge/2.0/54_BCBS_boundedBy"/>
         <Class IRI="http://www.opengis.net/citygml/bridge/2.0/BridgeConstructionElement"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="http://www.opengis.net/citygml/bridge/2.0/opening"/>
-        <Class IRI="http://www.opengis.net/citygml/bridge/2.0/_BoundarySurface"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="http://www.opengis.net/citygml/building/2.0/consistsOfBuildingPart"/>
-        <Class IRI="http://www.opengis.net/citygml/building/2.0/_AbstractBuilding"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty abbreviatedIRI="Sloten_casestudy:OWLObjectPropertyImpl_bec977cb_9535_4c9d_989a_b3004a4e6cb6"/>
-        <Class abbreviatedIRI="Sloten_casestudy:structure"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty abbreviatedIRI="Sloten_casestudy:accompanying"/>
-        <Class abbreviatedIRI="Sloten_casestudy:structure"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty abbreviatedIRI="Sloten_casestudy:bounds"/>
-        <Class IRI="http://www.opengis.net/citygml/building/2.0/_Building"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty abbreviatedIRI="Sloten_casestudy:consist_of"/>
-        <Class IRI="http://www.opengis.net/citygml/building/2.0/_Building"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty abbreviatedIRI="Sloten_casestudy:consist_of_bricks"/>
-        <Class abbreviatedIRI="Sloten_casestudy:masonry"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty abbreviatedIRI="Sloten_casestudy:consist_of_door"/>
-        <Class abbreviatedIRI="Sloten_casestudy:facade_outer_wall"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty abbreviatedIRI="Sloten_casestudy:consist_of_facade"/>
-        <Class IRI="http://www.opengis.net/citygml/building/2.0/_Building"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty abbreviatedIRI="Sloten_casestudy:consist_of_masonry"/>
-        <Class IRI="http://www.opengis.net/citygml/bridge/2.0/WallSurface"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty abbreviatedIRI="Sloten_casestudy:consist_of_wall"/>
-        <Class abbreviatedIRI="Sloten_casestudy:facade_outer_wall"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty abbreviatedIRI="Sloten_casestudy:consist_of_window"/>
-        <Class abbreviatedIRI="Sloten_casestudy:facade_outer_wall"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty abbreviatedIRI="Sloten_casestudy:consit_of_roof"/>
-        <Class IRI="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcBuildingElement"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty abbreviatedIRI="Sloten_casestudy:corresponto-to"/>
-        <Class abbreviatedIRI="Sloten_casestudy:parcel"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty abbreviatedIRI="Sloten_casestudy:decorated_with"/>
-        <Class IRI="http://www.opengis.net/citygml/bridge/2.0/WallSurface"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty abbreviatedIRI="Sloten_casestudy:footprint"/>
-        <Class IRI="#building_plot"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty abbreviatedIRI="Sloten_casestudy:has_function"/>
-        <Class IRI="http://www.opengis.net/citygml/landuse/2.0/LandUse"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty abbreviatedIRI="Sloten_casestudy:has_function_1"/>
-        <Class IRI="http://www.opengis.net/citygml/building/2.0/_Building"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty abbreviatedIRI="Sloten_casestudy:has_gutter_height"/>
-        <Class IRI="http://www.opengis.net/citygml/building/2.0/_Building"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty abbreviatedIRI="Sloten_casestudy:has_part_10"/>
-        <Class abbreviatedIRI="Sloten_casestudy:village"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty abbreviatedIRI="Sloten_casestudy:has_part_11"/>
-        <Class abbreviatedIRI="Sloten_casestudy:hamlet"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty abbreviatedIRI="Sloten_casestudy:has_part_12"/>
-        <Class abbreviatedIRI="Sloten_casestudy:historic_core"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty abbreviatedIRI="Sloten_casestudy:has_part_13"/>
-        <Class abbreviatedIRI="Sloten_casestudy:hamlet"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty abbreviatedIRI="Sloten_casestudy:has_part_14"/>
-        <Class abbreviatedIRI="Sloten_casestudy:village"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty abbreviatedIRI="Sloten_casestudy:has_part_15"/>
-        <Class IRI="http://www.opengis.net/citygml/building/2.0/_Building"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty abbreviatedIRI="Sloten_casestudy:has_part_8"/>
-        <Class abbreviatedIRI="Sloten_casestudy:village"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty abbreviatedIRI="Sloten_casestudy:hasd_part_9"/>
-        <Class abbreviatedIRI="Sloten_casestudy:village"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty abbreviatedIRI="Sloten_casestudy:is_in"/>
-        <Class IRI="http://www.opengis.net/citygml/transportation/2.0/_TransportationObject"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty abbreviatedIRI="Sloten_casestudy:is_in_1"/>
-        <Class IRI="http://www.opengis.net/citygml/2.0/_CityObject"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty abbreviatedIRI="Sloten_casestudy:is_in_2"/>
-        <Class IRI="http://www.opengis.net/citygml/waterbody/2.0/_WaterObject"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty abbreviatedIRI="Sloten_casestudy:is_in_3"/>
-        <Class IRI="http://www.opengis.net/citygml/vegetation/2.0/_VegetationObject"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty abbreviatedIRI="Sloten_casestudy:is_located"/>
-        <Class abbreviatedIRI="Sloten_casestudy:structure"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty abbreviatedIRI="Sloten_casestudy:located_in"/>
-        <Class IRI="http://www.opengis.net/citygml/building/2.0/_Building"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty abbreviatedIRI="Sloten_casestudy:located_in_1"/>
-        <Class abbreviatedIRI="Sloten_casestudy:village"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty abbreviatedIRI="Sloten_casestudy:located_in_2"/>
-        <Class abbreviatedIRI="Sloten_casestudy:hamlet"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="http://www.semanticweb.org/elisabetta/ontologies/2021/3/Sloten_casestudy#has_construction_time/year"/>
+        <ObjectProperty IRI="http://www.semanticweb.org/elisabetta/ontologies/2021/3/Sloten_casestudy#59_BF_consist_of_facade"/>
         <Class IRI="http://www.opengis.net/citygml/building/2.0/_Building"/>
     </ObjectPropertyDomain>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#P106_forms_part_of"/>
         <Class IRI="http://www.cidoc-crm.org/cidoc-crm/E90_Symbolic_Object"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#contains"/>
-        <Class IRI="http://www.opengis.net/citygml/2.0/_CityObject"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#has"/>
-        <Class IRI="#Geometry"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#hasGeometry"/>
-        <Class IRI="#Geometry"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#has_a"/>
-        <Class IRI="#Urban_structure"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#is-a_cultural_centre_0"/>
-        <Class IRI="#cultural_centre"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#is_a_cultural_centre_1"/>
-        <Class IRI="#cultural_centre"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#is_located_1"/>
-        <Class IRI="http://www.opengis.net/citygml/2.0/_CityObject"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#is_part_of"/>
-        <Class IRI="http://www.opengis.net/citygml/2.0/_CityObject"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#is_part_of_town"/>
-        <Class IRI="#city"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#is_the_result_of"/>
@@ -2572,6 +3434,10 @@
         <Class IRI="#Spatial_organisation"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="#06_HS_has-part"/>
+        <Class IRI="#Spatial_structure"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="#07_HL_has-part"/>
         <Class IRI="#Land_use_pattern"/>
     </ObjectPropertyRange>
@@ -2588,20 +3454,152 @@
         <Class IRI="#Infrastructure"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="#100_SOM_is-observed"/>
+        <Class IRI="#S4_Observation"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#101_ARV_has-value"/>
+        <Class IRI="#Cultural_and_Natural_values_and_attributes"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#102_BHV_has-value"/>
+        <Class IRI="#Cultural_and_Natural_values_and_attributes"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#103_BEV_has-value"/>
+        <Class IRI="#Cultural_and_Natural_values_and_attributes"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#104_CHV_has-value"/>
+        <Class IRI="#Cultural_and_Natural_values_and_attributes"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#105_CCV_has-value"/>
+        <Class IRI="#Cultural_and_Natural_values_and_attributes"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#106_HV_has-value"/>
+        <Class IRI="#Cultural_and_Natural_values_and_attributes"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#107_VV_has-value"/>
+        <Class IRI="#Cultural_and_Natural_values_and_attributes"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#108_PCO_live-in"/>
+        <Class IRI="http://www.opengis.net/citygml/2.0/_CityObject"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#109_PBH_designed"/>
+        <Class IRI="#architectural_heritage"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="#11_HB_has-part"/>
         <Class IRI="#Built_environment"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#110_CHR_has-reference"/>
+        <Class IRI="#Cultural_reference"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#111_COL_could-be"/>
+        <Class IRI="#Landmark_site"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#112_SOSF_has"/>
+        <Class IRI="#Symbolic_and_historic_function"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#113_COUA_is_in"/>
+        <Class IRI="#Urban_area"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#118_arelocatedin"/>
+        <Class IRI="#high_alpine_area"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#119_isin"/>
+        <Class IRI="#high_alpine_area"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#12_HH_has-part"/>
         <Class IRI="#Hydrology"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="#120_areinthe"/>
+        <Class IRI="http://www.cidoc-crm.org/cidoc-crm/OWLClassImpl_feff65e1_fb4c_4b3d_aad2_4a884ab0574a"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#121_connect_the"/>
+        <Class IRI="#structure_not_building"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#122_hasvalue"/>
+        <Class IRI="#historic_naturalistic_landscape_value"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#123_hasvalue"/>
+        <Class IRI="#historic_naturalistic_landscape_value"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#124_need"/>
+        <Class IRI="#sustainable_development"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#125_need"/>
+        <Class IRI="#protection"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#126_need"/>
+        <Class IRI="#recovery_plan"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#127_is_related_to"/>
+        <Class IRI="#Geomorphology"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#128_is_related_to"/>
+        <Class IRI="http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#129_is_related_to"/>
+        <Class IRI="http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="#13_HG_has-part"/>
         <Class IRI="#Geomorphology"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="#130_islocatedin"/>
+        <Class IRI="#hamlet"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#131_islocatedin"/>
+        <Class IRI="#hamlet"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#132_islocatedin"/>
+        <Class IRI="#hamlet"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#133_have"/>
+        <Class IRI="#population"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#134_has"/>
+        <Class IRI="#ski_area"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#135_arein"/>
+        <Class IRI="#historical_centre"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="#14_HT_has-part"/>
         <Class IRI="#Topography"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#15_is_characterised_by_a"/>
+        <Class IRI="#Spatial_organisation"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#15_is_characterised_by_a"/>
@@ -2673,7 +3671,7 @@
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#32_IA_has-part"/>
-        <Class IRI="#Activity"/>
+        <Class IRI="http://www.cidoc-crm.org/cidoc-crm/OWLClassImpl_2bf56bde_2a82_4282_99c6_b12d53fbd210"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#33_BR_has-part"/>
@@ -2684,12 +3682,20 @@
         <Class IRI="http://www.opengis.net/citygml/bridge/2.0/WallSurface"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="#36_HNF_has-part"/>
+        <Class IRI="#natural_feature"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#37_BBS_bounds"/>
+        <Class IRI="http://www.opengis.net/citygml/bridge/2.0/_BoundarySurface"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="#38_UU_has-part"/>
         <Class IRI="#Urban_area"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#39_UC_is-part-of"/>
-        <Class IRI="#city"/>
+        <Class IRI="#Historical_urban_landscape"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#40_II_is-part-of"/>
@@ -2720,10 +3726,6 @@
         <Class IRI="http://www.opengis.net/citygml/bridge/2.0/_Opening"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#46_MH_has-part"/>
-        <Class IRI="#historic_monument"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
         <ObjectProperty IRI="#47_BE_has-part"/>
         <Class IRI="http://www.opengis.net/citygml/bridge/2.0/RoofSurface"/>
     </ObjectPropertyRange>
@@ -2737,7 +3739,7 @@
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#50_CAP_has-part"/>
-        <Class abbreviatedIRI="Sloten_casestudy:parcel"/>
+        <Class IRI="#parcel/ground"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#51_CO_has-part"/>
@@ -2745,15 +3747,197 @@
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#52_CO_has-part"/>
-        <Class abbreviatedIRI="Sloten_casestudy:historic_core"/>
+        <Class IRI="#historical_city_core"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#53_SL_accompanying"/>
+        <Class IRI="http://www.opengis.net/citygml/landuse/2.0/LandUse"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#55_MH_has-part"/>
+        <Class IRI="#historical_monument"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#56_SSNB_connected_to"/>
+        <Class IRI="#structure_not_building"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#57_MB_consist_of_bricks"/>
+        <Class IRI="#brick"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#58_FD_consist_of_door"/>
+        <Class IRI="http://www.opengis.net/citygml/bridge/2.0/Door"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#60_WM_consist_of_masonry"/>
+        <Class IRI="#masonry"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#61_FW_consist_of_wall"/>
+        <Class IRI="http://www.opengis.net/citygml/bridge/2.0/WallSurface"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#62_FW_consist_of_window"/>
+        <Class IRI="http://www.opengis.net/citygml/bridge/2.0/Window"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#63_ABP_consistsOfBuildingPart"/>
+        <Class IRI="http://www.opengis.net/citygml/building/2.0/BuildingPart"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#64_BERS_consit_of_roof"/>
+        <Class IRI="http://www.opengis.net/citygml/bridge/2.0/RoofSurface"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#65_BS_consist_of"/>
+        <Class IRI="#storey"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#66_PCO_contains"/>
+        <Class IRI="http://www.opengis.net/citygml/2.0/_CityObject"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#67_PLU_corresponto-to"/>
+        <Class IRI="http://www.opengis.net/citygml/landuse/2.0/LandUse"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#68_WG_decorated_with"/>
+        <Class IRI="y#gable"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#69_BPP_footprint"/>
+        <Class IRI="#parcel/ground"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#70_SOG_has"/>
+        <Class IRI="#Geometry"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#71_COUS_has_a"/>
+        <Class IRI="#Urban_structure"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#72_BC_has_construction_time/year"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="http://www.semanticweb.org/elisabetta/ontologies/2021/3/Sloten_casestudy#comstrcution_time/year"/>
+            <Datatype abbreviatedIRI="xsd:integer"/>
+        </DataSomeValuesFrom>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#73_LUF_has_function"/>
+        <Class IRI="#function"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#74_BF_has_function"/>
+        <Class IRI="#function"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#75_BGH_has_gutter_height"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="Sloten_casestudy:gutter_height"/>
+            <Datatype abbreviatedIRI="rdfs:Literal"/>
+        </DataSomeValuesFrom>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#76_VHC_has-part"/>
+        <Class IRI="#historical_city_core"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#77_HHC_has-part"/>
+        <Class IRI="#historical_city_core"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#78_HCSA_has-part"/>
+        <Class IRI="#sub_area"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#79_HMHC_has-part"/>
+        <Class abbreviatedIRI="Sloten_casestudy:minor_historical_centre"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#80_VMHC_has-part"/>
+        <Class abbreviatedIRI="Sloten_casestudy:minor_historical_centre"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#81_BBP_has-part"/>
+        <Class IRI="http://www.opengis.net/citygml/building/2.0/BuildingPart"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#82_VB_has-part"/>
+        <Class IRI="http://www.opengis.net/citygml/building/2.0/_Building"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#83_VSA_has-part"/>
+        <Class IRI="#sub_area"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#84_COG_hasGeometry"/>
+        <Class IRI="#Geometry"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#85_LUP_haspattern"/>
+        <Class IRI="#Land_use_pattern"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#86_BCC_is-a_cultural_centre"/>
+        <Class IRI="#cultural_centre"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#87_TP_is_in"/>
+        <Class IRI="#parcel/ground"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#88_COP_is_in"/>
+        <Class IRI="#parcel/ground"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#89_WOLU_is_in"/>
+        <Class IRI="http://www.opengis.net/citygml/landuse/2.0/LandUse"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#90_VOLU_is_in"/>
+        <Class IRI="http://www.opengis.net/citygml/landuse/2.0/LandUse"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#91_SP_is_located"/>
+        <Class IRI="#parcel/ground"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#92_SCO_is_located"/>
+        <Class IRI="http://www.opengis.net/citygml/2.0/_CityObject"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#93_HCCO_is_part_of"/>
+        <Class IRI="http://www.opengis.net/citygml/2.0/_CityObject"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#94_NCO_is_part_of_city"/>
+        <Class IRI="http://www.opengis.net/citygml/2.0/_CityObject"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#95_BSA_located-in"/>
+        <Class IRI="#sub_area"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#96_VRA_located-in"/>
+        <Class IRI="#rural_area"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#97_HRA_located-in"/>
+        <Class IRI="#rural_area"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#98_BSO_opening"/>
+        <Class IRI="http://www.opengis.net/citygml/bridge/2.0/_Opening"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#99_COC_is_located_in"/>
+        <Class IRI="#country"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="http://www.cidoc-crm.org/cidoc-crm/OWLObjectPropertyImpl_2029b97c_777d_4fa8_8868_717d3081a870"/>
         <Class IRI="http://www.cidoc-crm.org/cidoc-crm/OWLClassImpl_feff65e1_fb4c_4b3d_aad2_4a884ab0574a"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="http://www.cidoc-crm.org/cidoc-crm/OWLObjectPropertyImpl_54613684_8fff_4967_848a_2a7e60a102ce"/>
-        <Class IRI="http://www.cidoc-crm.org/cidoc-crm/E90_Symbolic_Object"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="http://www.cidoc-crm.org/cidoc-crm/OWLObjectPropertyImpl_721da535_b86a_4e92_9e29_5ec41955b2b8"/>
@@ -2900,10 +4084,6 @@
         <Class IRI="http://www.cidoc-crm.org/cidoc-crm/OWLClassImpl_d199eed8_0e16_44cf_aa81_dc7155bdc220"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="http://www.cidoc-crm.org/cidoc-crm/P53_has_former_or_current_location"/>
-        <Class IRI="http://www.cidoc-crm.org/cidoc-crm/OWLClassImpl_feff65e1_fb4c_4b3d_aad2_4a884ab0574a"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
         <ObjectProperty IRI="http://www.cidoc-crm.org/cidoc-crm/P54_has_current_permanent_location"/>
         <Class IRI="http://www.cidoc-crm.org/cidoc-crm/OWLClassImpl_feff65e1_fb4c_4b3d_aad2_4a884ab0574a"/>
     </ObjectPropertyRange>
@@ -3016,10 +4196,6 @@
         <Class IRI="http://www.cidoc-crm.org/cidoc-crm/OWLClassImpl_4d19e32a_8119_43bd_ba8d_58b70789cd39"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="http://www.ics.forth.gr/isl/CRMgeo/Q2_occupied"/>
-        <Class IRI="http://www.ics.forth.gr/isl/CRMgeo/#SP1_Phenomenal_Spacetime_Volume"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
         <ObjectProperty IRI="http://www.ics.forth.gr/isl/CRMgeo/Q4_has_spatial_projection"/>
         <Class IRI="http://www.ics.forth.gr/isl/CRMgeo/SP2_Phenomenal_Place"/>
     </ObjectPropertyRange>
@@ -3036,158 +4212,12 @@
         <Class IRI="http://www.ics.forth.gr/isl/CRMgeo/SP4_Spatial_Coordinate_Reference_System"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="http://www.opengis.net/citygml/bridge/2.0/boundedBy"/>
+        <ObjectProperty IRI="http://www.opengis.net/citygml/bridge/2.0/54_BCBS_boundedBy"/>
         <Class IRI="http://www.opengis.net/citygml/bridge/2.0/_BoundarySurface"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="http://www.opengis.net/citygml/bridge/2.0/opening"/>
-        <Class IRI="http://www.opengis.net/citygml/bridge/2.0/_Opening"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="http://www.opengis.net/citygml/building/2.0/consistsOfBuildingPart"/>
-        <Class IRI="http://www.opengis.net/citygml/building/2.0/BuildingPart"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty abbreviatedIRI="Sloten_casestudy:OWLObjectPropertyImpl_bec977cb_9535_4c9d_989a_b3004a4e6cb6"/>
-        <Class abbreviatedIRI="Sloten_casestudy:structure_not_building"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty abbreviatedIRI="Sloten_casestudy:accompanying"/>
-        <Class IRI="http://www.opengis.net/citygml/landuse/2.0/LandUse"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty abbreviatedIRI="Sloten_casestudy:bounds"/>
-        <Class IRI="http://www.opengis.net/citygml/bridge/2.0/_BoundarySurface"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty abbreviatedIRI="Sloten_casestudy:consist_of"/>
-        <Class abbreviatedIRI="Sloten_casestudy:storey"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty abbreviatedIRI="Sloten_casestudy:consist_of_bricks"/>
-        <Class IRI="#brick"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty abbreviatedIRI="Sloten_casestudy:consist_of_door"/>
-        <Class IRI="http://www.opengis.net/citygml/bridge/2.0/Door"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty abbreviatedIRI="Sloten_casestudy:consist_of_facade"/>
-        <Class abbreviatedIRI="Sloten_casestudy:facade_outer_wall"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty abbreviatedIRI="Sloten_casestudy:consist_of_masonry"/>
-        <Class abbreviatedIRI="Sloten_casestudy:masonry"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty abbreviatedIRI="Sloten_casestudy:consist_of_wall"/>
-        <Class IRI="http://www.opengis.net/citygml/bridge/2.0/WallSurface"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty abbreviatedIRI="Sloten_casestudy:consist_of_window"/>
-        <Class IRI="http://www.opengis.net/citygml/bridge/2.0/Window"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty abbreviatedIRI="Sloten_casestudy:consit_of_roof"/>
-        <Class IRI="http://www.opengis.net/citygml/bridge/2.0/RoofSurface"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty abbreviatedIRI="Sloten_casestudy:corresponto-to"/>
-        <Class IRI="http://www.opengis.net/citygml/landuse/2.0/LandUse"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty abbreviatedIRI="Sloten_casestudy:decorated_with"/>
-        <Class abbreviatedIRI="Sloten_casestudy:gable"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty abbreviatedIRI="Sloten_casestudy:footprint"/>
-        <Class abbreviatedIRI="Sloten_casestudy:parcel"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty abbreviatedIRI="Sloten_casestudy:has_function"/>
-        <Class abbreviatedIRI="Sloten_casestudy:function"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty abbreviatedIRI="Sloten_casestudy:has_function_1"/>
-        <Class abbreviatedIRI="Sloten_casestudy:function"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty abbreviatedIRI="Sloten_casestudy:has_gutter_height"/>
-        <DataSomeValuesFrom>
-            <DataProperty abbreviatedIRI="Sloten_casestudy:gutter_height"/>
-            <Datatype abbreviatedIRI="rdfs:Literal"/>
-        </DataSomeValuesFrom>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty abbreviatedIRI="Sloten_casestudy:has_part_10"/>
-        <Class abbreviatedIRI="Sloten_casestudy:historic_core"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty abbreviatedIRI="Sloten_casestudy:has_part_11"/>
-        <Class abbreviatedIRI="Sloten_casestudy:historic_core"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty abbreviatedIRI="Sloten_casestudy:has_part_12"/>
-        <Class abbreviatedIRI="Sloten_casestudy:sub_area"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty abbreviatedIRI="Sloten_casestudy:has_part_13"/>
-        <Class abbreviatedIRI="Sloten_casestudy:minor_historical_centre"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty abbreviatedIRI="Sloten_casestudy:has_part_14"/>
-        <Class abbreviatedIRI="Sloten_casestudy:minor_historical_centre"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty abbreviatedIRI="Sloten_casestudy:has_part_15"/>
-        <Class IRI="http://www.opengis.net/citygml/building/2.0/BuildingPart"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty abbreviatedIRI="Sloten_casestudy:has_part_8"/>
-        <Class IRI="http://www.opengis.net/citygml/building/2.0/_Building"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty abbreviatedIRI="Sloten_casestudy:hasd_part_9"/>
-        <Class abbreviatedIRI="Sloten_casestudy:sub_area"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty abbreviatedIRI="Sloten_casestudy:is_in"/>
-        <Class abbreviatedIRI="Sloten_casestudy:parcel"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty abbreviatedIRI="Sloten_casestudy:is_in_1"/>
-        <Class abbreviatedIRI="Sloten_casestudy:parcel"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty abbreviatedIRI="Sloten_casestudy:is_in_2"/>
-        <Class IRI="http://www.opengis.net/citygml/landuse/2.0/LandUse"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty abbreviatedIRI="Sloten_casestudy:is_in_3"/>
-        <Class IRI="http://www.opengis.net/citygml/landuse/2.0/LandUse"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty abbreviatedIRI="Sloten_casestudy:is_located"/>
-        <Class abbreviatedIRI="Sloten_casestudy:parcel"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty abbreviatedIRI="Sloten_casestudy:located_in"/>
-        <Class abbreviatedIRI="Sloten_casestudy:sub_area"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty abbreviatedIRI="Sloten_casestudy:located_in_1"/>
-        <Class IRI="#rural_area"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty abbreviatedIRI="Sloten_casestudy:located_in_2"/>
-        <Class IRI="#rural_area"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="http://www.semanticweb.org/elisabetta/ontologies/2021/3/Sloten_casestudy#has_construction_time/year"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="http://www.semanticweb.org/elisabetta/ontologies/2021/3/Sloten_casestudy#comstrcution_time/year"/>
-            <Datatype abbreviatedIRI="xsd:integer"/>
-        </DataSomeValuesFrom>
+        <ObjectProperty IRI="http://www.semanticweb.org/elisabetta/ontologies/2021/3/Sloten_casestudy#59_BF_consist_of_facade"/>
+        <Class IRI="#facade_outer_wall"/>
     </ObjectPropertyRange>
     <DataPropertyDomain>
         <DataProperty IRI="#above_ground"/>
@@ -3198,10 +4228,6 @@
         <Class IRI="#Infrastructure"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="#central"/>
-        <Class IRI="#city"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
         <DataProperty IRI="#contemporary"/>
         <Class IRI="#Built_environment"/>
     </DataPropertyDomain>
@@ -3210,12 +4236,16 @@
         <Class IRI="http://www.opengis.net/citygml/building/2.0/_Building"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
+        <DataProperty IRI="#historical"/>
+        <Class IRI="#Built_environment"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
         <DataProperty IRI="#new"/>
-        <Class IRI="#urban_centre"/>
+        <Class IRI="#historical_urban_centre"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#old"/>
-        <Class IRI="#urban_centre"/>
+        <Class IRI="#historical_urban_centre"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#purpose"/>
@@ -3250,18 +4280,6 @@
         <Class IRI="#Geometry"/>
     </DataPropertyDomain>
     <DataPropertyRange>
-        <DataProperty IRI="#duration"/>
-        <Datatype IRI="#permanent"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#purpose"/>
-        <Datatype IRI="#givingShelter"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#size"/>
-        <Datatype IRI="#substantial"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
         <DataProperty IRI="http://www.opengis.net/ont/geosparql#OWLDataPropertyImpl_29286df0_1991_4513_81f8_0002045f6d7a"/>
         <Datatype abbreviatedIRI="xsd:integer"/>
     </DataPropertyRange>
@@ -3287,11 +4305,6 @@
         <Literal>Getty AAT
 
 Buildings that are significant in the history of architecture, that incorporate significant architectural features, or that played significant historic roles in local cultural or social development; may or may not be officially designated. For buildings that are abandoned but not considered necessarily historic, use &quot;abandoned buildings.&quot;</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="#Source"/>
-        <IRI>#Activity</IRI>
-        <Literal>ICOMOS - Historic towns and urban areas (2011)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="#Source"/>
@@ -3374,11 +4387,6 @@ Refers to the aggregates of human-made structures, infrastructural elements, and
         <Literal>NLUD</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="#Source"/>
-        <IRI>#Garden</IRI>
-        <Literal>UNESCO HUL</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty IRI="#Description"/>
         <IRI>#Geometry</IRI>
         <Literal>The class represents the top-level geometry type. This class is 
@@ -3419,10 +4427,38 @@ All Geometry classes described in this specification are defined so that instanc
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#Historic_building</IRI>
+        <IRI>#Historical_building</IRI>
         <Literal>Getty AAT
 
-Buildings that are significant in the history of architecture, that incorporate significant architectural features, or that played significant historic roles in local cultural or social development; may or may not be officially designated. For buildings that are abandoned but not considered necessarily historic, use &quot;abandoned buildings.&quot;</Literal>
+Buildings that are significant in the history of architecture, that incorporate significant architectural features, or that played significant historic roles in local cultural or social development; may or may not be officially designated. For buildings that are abandoned but not considered necessarily historic, use &quot;abandoned buildings.&quot;
+
+
+A historical building is a complex system of spaces, volumes, materials, surfaces, constructive aspects, actual and past functions and configurations, degradation, etc. The whole is the result of a continuous historical process of modification and transformation
+BRUSAPORCI, 2020</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Historical_town</IRI>
+        <Literal>ICOMOS (2011)
+
+Historic towns and urban areas: spatial structures that express the evolution of a society and of its cultural identity. Historic sites are an integral part of a broader natural or man‐made context and the two must be considered inseparable. Historical towns and urban areas are made up of tangible and intangible elements. The tangible elements include, in addition to the urban structure, architectural elements, the landscapes within and around the town, archaeological remains, panoramas, skylines, view‐lines and landmark sites. Intangible elements include activities, symbolic and historical functions, cultural practices, traditions, memories, and cultural references that constitute the substance of their historic value.
+
+Evolution of a society and of its cultural identity.
+Historic sites are an integral part of a broader natural or man‐made context and the two must be considered inseparable.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Historical_urban_landscape</IRI>
+        <Literal>UNESCO (2011)
+
+Historic Urban Landscape (HUL): &quot;the urban area understood as the result of a historical layering of cultural and natural values and attributes, extending beyond the notion of historical centre or ensemble&quot;. This new broader notion includes an enriched definition of historical urban structures including the: &quot;topography, geomorphology, hydrology and natural features; its built environment, both historic and contemporary; its infrastructures above and below ground; its open spaces and gardens, its land use patterns and spatial organization; perceptions and visual relationships; as well as all other elements of the urban structure. It also includes social and cultural practices and values, economic processes and the intangible dimensions of heritage as related to diversity and identity&quot;
+
+
+
+Getty AAT
+HISTORICAL LANDSCAPE
+
+Cultural landscapes that are significant in the history of landscape architecture or gardening or that were developed as a result of historic use of natural features; includes shaped areas of land and sometimes structures.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="#Source"/>
@@ -3446,6 +4482,11 @@ https://bag.basisregistraties.overheid.nl/begrippenlijst</Literal>
         <AnnotationProperty IRI="#Source"/>
         <IRI>#Infrastructure</IRI>
         <Literal>UNESCO HUL</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Infrastructure</IRI>
+        <Literal>The basic physical and organizational structures and facilities (e.g. buildings, roads, power supplies) needed for the operation of a society or enterprise.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="#Source"/>
@@ -3627,9 +4668,35 @@ Abandoned Minor historical centres  those in which the physical and technolog
 In 1975 the European Charter of Architectural Heritage defined “abandoned places”.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#alpine_environment</IRI>
+        <Literal>PPR</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ancient</IRI>
+        <Literal>Ancient cities were in origin clubs of warrior-farmers, whose membership (citizenship) and political participation were predicated on their ownership of land in the community’s territory and who supplied their own armoury
+
+Zuiderhoek, 2016</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty IRI="#Source"/>
         <IRI>#architectural_heritage</IRI>
-        <Literal>ICOMOS - Historic towns and urban areas (2011)</Literal>
+        <Literal>“In the modern theory by Brandi, the qualities of cultural heritage are the historical and aesthetic values. A historical building is a complex system of spaces, volumes, materials, surfaces, constructive aspects, actual and past functions and configurations, degradation, etc. The whole is the result of a continuous historical process of modification and transformation. An architectural heritage can be interpreted as an “artefact”, where its elements are witnesses of the cultures, actors, and of events occurred during the life of the building” 
+(Brusaporci, 2020).
+
+
+Historic towns and urban areas
+ICOMOS, 2011
+
+
+Built works transmitted inter-generationally within a society and that are invested with significance in that society.
+Getty AAT</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#brick</IRI>
+        <Literal>historical core of Sloten regulation</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -3637,11 +4704,37 @@ In 1975 the European Charter of Architectural Heritage defined “abandoned plac
         <Literal>sloten regulation</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty IRI="#Description"/>
+        <IRI>#built_heritage</IRI>
+        <Literal>Built heritage represents another crucial cultural asset; it is the historical layers of our built environment in places.
+The term cultural built heritage is, therefore, a broad concept.
+“According to the UNESCO Universal Declaration on Cultural Diversity (UNESCO, 2002), culture is “the set of distinctive spiritual, material, intellectual and emotional features of a society or a social group that encompasses art and literature, lifestyles, ways of living together, value systems, traditions and beliefs”. Thus, urban culture covers the notions of culture within an urban setting from both a functional and anthropological perspective.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#city</IRI>
-        <Literal>getty AAT
+        <IRI>#central_city</IRI>
+        <Literal>Largest core areas within the incorporated limits of metropolitan areas; often used to distinguish the center from the suburban or newer outlying sections of metropolitan areas; generally excludes the central business district and inner city sections
 
-Distinctions among villages, towns, and cities are relative and vary according to their individual regional contexts. Generally, cities designate large or important communities with population, status, and internal complexity greater than most towns in the region</Literal>
+Getty AAT</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#cityscape</IRI>
+        <Literal>city landscape 
+Zoning Plan of Sloten
+
+Art 20.1.1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#citywall</IRI>
+        <Literal>Zoning Plan Sloten
+Art 20.1.1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#country</IRI>
+        <Literal>new entity to express the country of minor historical centres</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="#Source"/>
@@ -3670,14 +4763,77 @@ Moreover, the more recent definitions of CH items in the UNESCO documents includ
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#hasGeometry</IRI>
-        <Literal>GEOSPARQL ontology
-
-      A spatial representation for a given feature.</Literal>
+        <IRI>#environment</IRI>
+        <Literal>PPR - Regional Landscape Plan - Piedmont</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#facade_outer_wall</IRI>
+        <Literal>historical core of Sloten regulation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#function</IRI>
+        <Literal>historical core of Sloten regulation</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="#Source"/>
-        <IRI>#historic_monument</IRI>
+        <IRI>#hamlet</IRI>
+        <Literal>Getty ATT
+
+Small rural centers which contain basic community, education, and religious facilities and which generally do not exceed 250 residents; may also refer to the smallest incorporated units of a municipal government.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#high_alpine_area</IRI>
+        <Literal>PPR - Landscape Regional Plan - Piedmont</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#historic_naturalistic_landscape_value</IRI>
+        <Literal>PPR</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#Source"/>
+        <IRI>#historical_centre</IRI>
+        <Literal>equivalent to Ecpm 30 Historical centre - Acierno, Fiorani</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#historical_centre</IRI>
+        <Literal>_A historical centre, however, as well as the neighborhoods of the new city connected to it, continues to live; it has its own population which often carries out its work activities within the center itself, maintains social and political relationships and cultural exchanges; has its own face validly expressed through the architectures and the environment formed by them. A historical centre is the place of people traditions and culture. Fano, G. (1974)
+
+_historic centre represents the oldest part of an urban settlement, generally the richest in historical evidence; in urban planning (Dizionario Treccani).
+
+_historic city is the one that, with the stratification of its monuments and the entire urban fabric, exemplary reflects the historical, anthropological, cultural and artistic evolutionary process of which it was the protagonist (Dezzi Bardeschi).
+
+- An historical centre is “a place more or less configurable within a perimeter/boundary, where citizenship has traditionally carried out (and continues to carry out) the main activities, and the most representative offices for these functions have long since consolidated” (Di Gioia, 1975). 
+
+- Today, on the basis of this long debate, an historical centre, therefore understood as a cultural, economic and social asset, constitutes an extremely sensitive geographical area, with a specific urban identity and a high historical value and testimonial referable both to the urban fabric that to elements of the building heritage, both with notable that with minor importance (Cerasoli, 2010).
+
+- centres comprising a considerable number of cultural heritages called &quot;monumental centres&quot; (unesco, 1954)
+
+- A historical centre is the place of people traditions and culture.(Getty AAT)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#historical_city</IRI>
+        <Literal>Concept: Ancient cities - Group: Social and human sciences &gt; Human settlements and land use
+UNESCO THESAURUS
+
+historic city is the one that, with the stratification of its monuments and the entire urban fabric, exemplary reflects the historical, anthropological, cultural and artistic evolutionary process of which it was the protagonist
+BARDESCHI, 1998</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:description"/>
+        <IRI>#historical_city_core</IRI>
+        <Literal>Core of a city that constitutes a complex linked to particular historical moments due to formal, typological and urban characteristics. Sometimes the concept of the historic centre is extended to the whole city, when it represents a living testimony of other eras.
+
+Dizionario Enciclopedico di Architettura e urbanistica, 1969</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#Source"/>
+        <IRI>#historical_monument</IRI>
         <Literal>Getty ATT
 
 Refers to monuments with local, regional, or international political, cultural, or artistic significance.
@@ -3689,36 +4845,23 @@ concept: Monument - Group: Culture &gt; Visual arts</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="#Source"/>
-        <IRI>#historical_centre</IRI>
-        <Literal>equivalent to Ecpm 30 Historical centre - Acierno, Fiorani</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#historical_centre</IRI>
-        <Literal>_An urban center, both old and new, in fact represents an entity with life (in the broadest sense that can be attributed to this expression.
-
- _A historical centre, however, as well as the neighborhoods of the new city connected to it, continues to live; it has its own population which often carries out its work activities within the center itself, maintains social and political relationships and cultural exchanges; has its own face validly expressed through the architectures and the environment formed by them. A historical centre is the place of people traditions and culture. Fano, G. (1974)
-
-_historic centre represents the oldest part of an urban settlement, generally the richest in historical evidence; in urban planning (Dizionario Treccani).
-
-_historic city is the one that, with the stratification of its monuments and the entire urban fabric, exemplary reflects the historical, anthropological, cultural and artistic evolutionary process of which it was the protagonist (Dezzi Bardeschi).
-
--	An historical centre is “a place more or less configurable within a perimeter/boundary, where citizenship has traditionally carried out (and continues to carry out) the main activities, and the most representative offices for these functions have long since consolidated” (Di Gioia, 1975). 
--	Today, on the basis of this long debate, an historical centre, therefore understood as a cultural, economic and social asset, constitutes an extremely sensitive geographical area, with a specific urban identity and a high historical value and testimonial referable both to the urban fabric that to elements of the building heritage, both with notable that with minor importance (Cerasoli, 2010).</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#historical_landscape</IRI>
-        <Literal>Getty AAT
-
-Cultural landscapes that are significant in the history of landscape architecture or gardening or that were developed as a result of historic use of natural features; includes shaped areas of land and sometimes structures.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="#Source"/>
         <IRI>#historical_quarter</IRI>
         <Literal>Getty ATT
 
 Urban areas that are historically significant and retain characteristics and buildings from an historical period or periods.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:description"/>
+        <IRI>#historical_urban_centre</IRI>
+        <Literal>An urban center, both old and new, in fact represents an entity with life (in the broadest sense that can be attributed to this expression
+Fano, 1974
+
+They are urban settlement structures that constitute a cultural unit or the original and authentic part of settlements and testify to the characteristics of a lively urban culture
+For them, the law must provide adequate instruments, both financial and operational
+Astengo, 1967
+
+= Urban core. It is a large urban area around which a CMA or a CA is delineated. The urban core must have a population (based on the previous census) of at least 100,000 persons 
+Geographic definition, 1996</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -3734,13 +4877,71 @@ getty vocabularies: Cultural landscapes that are significant in the history of l
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#masonry</IRI>
+        <Literal>historical core of Sloten regulation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#mine</IRI>
+        <Literal>PPR</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:description"/>
+        <IRI>#monument</IRI>
+        <Literal>concept: Architecture - Group: Culture &gt; Visual arts
+
+UNESCO THESAURUS</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#museum</IRI>
+        <Literal>torurism data</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#natural_feature</IRI>
+        <Literal>UNESCO (2011)
+
+Historic Urban Landscape (HUL): &quot;the urban area understood as the result of a historical layering of cultural and natural values and attributes, extending beyond the notion of historical centre or ensemble&quot;. This new broader notion includes an enriched definition of historical urban structures including the: &quot;topography, geomorphology, hydrology and natural features; its built environment, both historic and contemporary; its infrastructures above and below ground; its open spaces and gardens, its land use patterns and spatial organization; perceptions and visual relationships; as well as all other elements of the urban structure. It also includes social and cultural practices and values, economic processes and the intangible dimensions of heritage as related to diversity and identity&quot;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#net</IRI>
+        <Literal>Any type of connection (wireless, transport, water, etc.)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#new</IRI>
         <Literal>Fano, G. (1974).</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#old</IRI>
-        <Literal>Fano, G. (1974).</Literal>
+        <Literal>Fano, G. (1974).
+
+Old City often refers to an old town, the historic or original core of a city or town</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#population</IRI>
+        <Literal>ISTAT</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#protection</IRI>
+        <Literal>PPR</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#recovery_plan</IRI>
+        <Literal>PPR</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#Source"/>
+        <IRI>#risk_hazard</IRI>
+        <Literal>CRED
+
+https://www.emdat.be/classification</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -3751,13 +4952,55 @@ Settlement areas characterized by country life or agriculture.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ski_area</IRI>
+        <Literal>tourism data</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#small_town</IRI>
-        <Literal>UNESCO Thesaurus</Literal>
+        <Literal>UNESCO Thesaurus
+Social and human sciences &gt; Human settlements and land use – Urban Area
+
+
+Used to refer to small social groups where ordinary people live
+Cambridge Dictionary</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#storey</IRI>
+        <Literal>Sloten regulation 
+Zoning Plan - Historic Core</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#structure</IRI>
+        <Literal>Sloten regulation 
+Zoning Plan - Historic Core</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#structure_not_building</IRI>
+        <Literal>Sloten regulation 
+Zoning Plan - Historic Core</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#subAlpine_forest</IRI>
+        <Literal>PPR - Regional Landscape Plan - Piedmont</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#sub_area</IRI>
+        <Literal>Sloten regulation 
+Zoning Plan - Historic Core</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="#Source"/>
         <IRI>#suburb</IRI>
         <Literal>UNESCO Thesaurus
+
+Social and human sciences &gt; Human settlements and land use - Urban areas 
+
 
 Getty ATT
 
@@ -3765,10 +5008,143 @@ Compactly developed or developing, usually residential, areas on the outskirts o
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#sustainable_development</IRI>
+        <Literal>PPR</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#Source"/>
+        <IRI>#village</IRI>
+        <Literal>Getty ATT
+
+Distinctions among villages, towns, and cities are relative and vary according to their individual regional contexts. Villages generally designate units of compact settlement, varying in size but usually larger than hamlets and smaller than towns and distinguished from the surrounding rural territory</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#wooden_context</IRI>
+        <Literal>PPR</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#yard</IRI>
         <Literal>ZONING PLAN
 NL.IMRO.0653.BPL2010220001-VG01
 Art.5</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#114_istheprovinceof</IRI>
+        <Literal>instances property</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#115_ismunicipalityfrom</IRI>
+        <Literal>instances property</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#116_isinthemunicipalityof</IRI>
+        <Literal>instances property</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#117_hasnumber</IRI>
+        <Literal>instances property</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#136_ispartof</IRI>
+        <Literal>instances property</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#137_isinthemunicipalityof</IRI>
+        <Literal>instances property</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#138_isinthemunicipalityof</IRI>
+        <Literal>instances property</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#139_include</IRI>
+        <Literal>instances property</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#140_islocatedin</IRI>
+        <Literal>instances property</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#141_isinthemunicipalityof</IRI>
+        <Literal>instances property</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#142_isintheRegion</IRI>
+        <Literal>instances property</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#143_isintheprovince</IRI>
+        <Literal>instances property</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#84_COG_hasGeometry</IRI>
+        <Literal>GEOSPARQL ontology
+
+      A spatial representation for a given feature.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#87_TP_is_in</IRI>
+        <Literal>topological relation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#91_SP_is_located</IRI>
+        <Literal>topological relation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#98_BSO_opening</IRI>
+        <Literal>topological relation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Ambito/Area_41</IRI>
+        <Literal>PPR Piedmont Region</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#parcel/ground</IRI>
+        <Literal>historical core of Sloten regulation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>y#gable</IRI>
+        <Literal>historical core of Sloten regulation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcBuildingElement</IRI>
+        <Literal>IFC  
+
+The building element comprises all elements that are primarily part of the construction of a built facility, i.e., its structural and space separating system. Building elements are all physically existent and tangible things
+
+NOTE  Definition from ISO 6707-1:
+Major functional part of a building, examples are foundation, floor, roof, wall.
+This IfcBuildingElement is a generalization of all elements that participate in a building system. Typical examples of IfcBuildingElement &apos;s are (among others):
+
+building elements within a space separation systems
+building elements within an enclosure system (such as a facade)
+building elements within a fenestration system
+building elements within a load bearing system
+building elements within a foundation system
+EXAMPLE  Building elements are walls, curtain wall, doors, columns, pile, and others.
+The IfcBuildingElement is an abstract entity that cannot be instantiated. For arbitrary building elements, that cannot be expressed by a subtype of IfcBuildingElement, use IfcBuildingElementProxy.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -4525,7 +5901,9 @@ This class also comprises items that are “about” something in the sense of a
         <IRI>http://www.cidoc-crm.org/cidoc-crm/OWLClassImpl_2bf56bde_2a82_4282_99c6_b12d53fbd210</IRI>
         <Literal xml:lang="en">This class comprises actions intentionally carried out by instances of E39 Actor that result in changes of state in the cultural, social, or physical systems documented. 
 This notion includes complex, composite and long-lasting actions such as the building of a settlement or a war, as well as simple, short-lived actions such as the opening of a door.
-</Literal>
+
+
+ICOMOS - Historic towns and urban areas (2011)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -4892,52 +6270,6 @@ In contrast to P156  occupies, the property P53 has former or current location i
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>http://www.cidoc-crm.org/cidoc-crm/OWLObjectPropertyImpl_2029b97c_777d_4fa8_8868_717d3081a870</IRI>
         <Literal xml:lang="it">P156_occupies</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>http://www.cidoc-crm.org/cidoc-crm/OWLObjectPropertyImpl_54613684_8fff_4967_848a_2a7e60a102ce</IRI>
-        <Literal xml:lang="en">This property identifies an E90 Symbolic Object carried by an instance of E18 Physical Thing.
-</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://www.cidoc-crm.org/cidoc-crm/OWLObjectPropertyImpl_54613684_8fff_4967_848a_2a7e60a102ce</IRI>
-        <Literal xml:lang="en">P128_carries</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://www.cidoc-crm.org/cidoc-crm/OWLObjectPropertyImpl_54613684_8fff_4967_848a_2a7e60a102ce</IRI>
-        <Literal xml:lang="it">P128_carries</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://www.cidoc-crm.org/cidoc-crm/OWLObjectPropertyImpl_54613684_8fff_4967_848a_2a7e60a102ce</IRI>
-        <Literal xml:lang="fr">est le support de</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://www.cidoc-crm.org/cidoc-crm/OWLObjectPropertyImpl_54613684_8fff_4967_848a_2a7e60a102ce</IRI>
-        <Literal xml:lang="de">trägt</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://www.cidoc-crm.org/cidoc-crm/OWLObjectPropertyImpl_54613684_8fff_4967_848a_2a7e60a102ce</IRI>
-        <Literal xml:lang="pt">é o suporte de</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://www.cidoc-crm.org/cidoc-crm/OWLObjectPropertyImpl_54613684_8fff_4967_848a_2a7e60a102ce</IRI>
-        <Literal xml:lang="el">φέρει</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://www.cidoc-crm.org/cidoc-crm/OWLObjectPropertyImpl_54613684_8fff_4967_848a_2a7e60a102ce</IRI>
-        <Literal xml:lang="ru">несет</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://www.cidoc-crm.org/cidoc-crm/OWLObjectPropertyImpl_54613684_8fff_4967_848a_2a7e60a102ce</IRI>
-        <Literal xml:lang="zh">承载信息</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -5601,11 +6933,6 @@ It does not specify anything about the shared area. This property is purely spat
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>http://www.cidoc-crm.org/cidoc-crm/P121_overlaps_with</IRI>
-        <Literal xml:lang="en">overlaps with</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://www.cidoc-crm.org/cidoc-crm/P121_overlaps_with</IRI>
         <Literal xml:lang="pt">sobrepõe com</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
@@ -5674,41 +7001,6 @@ This property is purely spatial, in contrast to Allen operators, which are purel
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>http://www.cidoc-crm.org/cidoc-crm/P122_borders_with</IRI>
         <Literal xml:lang="zh">接壤于</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://www.cidoc-crm.org/cidoc-crm/P128i_is_carried_by</IRI>
-        <Literal xml:lang="en">P128_is carried by</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://www.cidoc-crm.org/cidoc-crm/P128i_is_carried_by</IRI>
-        <Literal xml:lang="fr">a pour support</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://www.cidoc-crm.org/cidoc-crm/P128i_is_carried_by</IRI>
-        <Literal xml:lang="de">wird getragen von</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://www.cidoc-crm.org/cidoc-crm/P128i_is_carried_by</IRI>
-        <Literal xml:lang="pt">é suportado por</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://www.cidoc-crm.org/cidoc-crm/P128i_is_carried_by</IRI>
-        <Literal xml:lang="el">φέρεται από</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://www.cidoc-crm.org/cidoc-crm/P128i_is_carried_by</IRI>
-        <Literal xml:lang="ru">переносится посредством</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://www.cidoc-crm.org/cidoc-crm/P128i_is_carried_by</IRI>
-        <Literal xml:lang="zh">被承载于</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -6324,85 +7616,6 @@ P48 has preferred identifier (is preferred identifier of), is a shortcut for the
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>http://www.cidoc-crm.org/cidoc-crm/P48_has_preferred_identifier</IRI>
         <Literal xml:lang="zh">有首选标识符</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>http://www.cidoc-crm.org/cidoc-crm/P53_has_former_or_current_location</IRI>
-        <Literal xml:lang="en">This property allows an instance of E53 Place to be associated as the former or current location of an instance of E18 Physical Thing.
-In the case of E19 Physical Objects, the property does not allow any indication of the Time-Span during which the Physical Object was located at this Place, nor if this is the current location.
-In the case of immobile objects, the Place would normally correspond to the Place of creation.
-P53 has former or current location (is former or current location of) is a shortcut. A more detailed representation can make use of the fully developed (i.e. indirect) path from E19 Physical Object through P25 moved (moved by), E9 Move, P26 moved to (was destination of) or P27 moved from (was origin of) to E53 Place.
-</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://www.cidoc-crm.org/cidoc-crm/P53_has_former_or_current_location</IRI>
-        <Literal xml:lang="en">P53_has former or current location</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://www.cidoc-crm.org/cidoc-crm/P53_has_former_or_current_location</IRI>
-        <Literal xml:lang="fr">a ou a eu pour localisation</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://www.cidoc-crm.org/cidoc-crm/P53_has_former_or_current_location</IRI>
-        <Literal xml:lang="de">hat früheren oder derzeitigen Standort</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://www.cidoc-crm.org/cidoc-crm/P53_has_former_or_current_location</IRI>
-        <Literal xml:lang="pt">é ou foi localizada em</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://www.cidoc-crm.org/cidoc-crm/P53_has_former_or_current_location</IRI>
-        <Literal xml:lang="el">βρίσκεται ή βρισκόταν σε</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://www.cidoc-crm.org/cidoc-crm/P53_has_former_or_current_location</IRI>
-        <Literal xml:lang="ru">имеет текущее или бывшее местоположение</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://www.cidoc-crm.org/cidoc-crm/P53_has_former_or_current_location</IRI>
-        <Literal xml:lang="zh">目前或曾经被置放於</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://www.cidoc-crm.org/cidoc-crm/P53i_is_former_or_current_location_of</IRI>
-        <Literal xml:lang="en">P53_is former or current location of</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://www.cidoc-crm.org/cidoc-crm/P53i_is_former_or_current_location_of</IRI>
-        <Literal xml:lang="fr">est ou a été localisation de</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://www.cidoc-crm.org/cidoc-crm/P53i_is_former_or_current_location_of</IRI>
-        <Literal xml:lang="de">ist früherer oder derzeitiger Standort von</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://www.cidoc-crm.org/cidoc-crm/P53i_is_former_or_current_location_of</IRI>
-        <Literal xml:lang="pt">é ou foi localização de</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://www.cidoc-crm.org/cidoc-crm/P53i_is_former_or_current_location_of</IRI>
-        <Literal xml:lang="el">είναι ή ήταν θέση του</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://www.cidoc-crm.org/cidoc-crm/P53i_is_former_or_current_location_of</IRI>
-        <Literal xml:lang="ru">является текущим или бывшим местоположением для</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://www.cidoc-crm.org/cidoc-crm/P53i_is_former_or_current_location_of</IRI>
-        <Literal xml:lang="zh">目前或曾经被置放了</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -7032,51 +8245,6 @@ It addresses spatial containment only, and does not imply any relationship betwe
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>http://www.cidoc-crm.org/cidoc-crm/P8_took_place_on_or_within</IRI>
-        <Literal xml:lang="en">This property describes the location of an instance of E4 Period with respect to an E19 Physical Object. 
-P8 took place on or within (witnessed) is a shortcut of the more fully developed path from E4 Period through P7 took place at, E53 Place, P156 occupies (is occupied by) to E18 Physical Thing.
-
-It describes a period that can be located with respect to the space defined by an E19 Physical Object such as a ship or a building. The precise geographical location of the object during the period in question may be unknown or unimportant. 
-For example, the French and German armistice of 22 June 1940 was signed in the same railway carriage as the armistice of 11 November 1918.
-</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://www.cidoc-crm.org/cidoc-crm/P8_took_place_on_or_within</IRI>
-        <Literal xml:lang="en">P8_took place on or within</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://www.cidoc-crm.org/cidoc-crm/P8_took_place_on_or_within</IRI>
-        <Literal xml:lang="fr">a eu lieu sur ou dans</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://www.cidoc-crm.org/cidoc-crm/P8_took_place_on_or_within</IRI>
-        <Literal xml:lang="de">fand statt auf oder innerhalb von </Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://www.cidoc-crm.org/cidoc-crm/P8_took_place_on_or_within</IRI>
-        <Literal xml:lang="pt">ocorreu em ou dentro</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://www.cidoc-crm.org/cidoc-crm/P8_took_place_on_or_within</IRI>
-        <Literal xml:lang="el">έλαβε χώρα σε ή εντός</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://www.cidoc-crm.org/cidoc-crm/P8_took_place_on_or_within</IRI>
-        <Literal xml:lang="ru">имел место на или в</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://www.cidoc-crm.org/cidoc-crm/P8_took_place_on_or_within</IRI>
-        <Literal xml:lang="zh">发生所在物件是</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>http://www.cidoc-crm.org/cidoc-crm/P9_consists_of</IRI>
         <Literal xml:lang="en">This property associates an instance of E4 Period with another instance of E4 Period that is defined by a subset of the phenomena that define the former. Therefore the spacetime volume of the latter must fall within the spacetime volume of the former.
 </Literal>
@@ -7140,11 +8308,6 @@ For example, the French and German armistice of 22 June 1940 was signed in the s
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>http://www.ics.forth.gr/isl/CRMgeo/Q1_occupied</IRI>
         <Literal>Scope note:	This property associates an instance of E4 Period with the 4 dimensional point sets (volumes) in spacetime that it occupied. This instance of SP1 Phenomenal Spacetime Volume includes the trajectories of the participating physical things during their participation in the instance of E4 Period, the open spaces via which they have interacted and the spaces by which they had the potential to interact during that period or event in the way defined by the type of the respective period or event, such as the air in a meeting room transferring the voices. It also comprises the areas controlled by some military power. Therefore instances of E4 Period have fuzzy boundaries in spacetime.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>http://www.ics.forth.gr/isl/CRMgeo/Q2_occupied</IRI>
-        <Literal>Scope note:	This property describes the 4 dimensional point sets (volumes) in spacetime that the trajectory of an instance of E18 Physical Thing occupies in spacetime in the course of its existence. We include in the occupied space the space filled by the matter of the physical thing and all inner spaces not accessible in regular function.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -7277,7 +8440,14 @@ Examples:
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>http://www.opengis.net/citygml/2.0/_CityObject</IRI>
-        <Literal>Type describing the abstract superclass of most CityGML features. Its purpose is to provide a creation and a termination date as well as a reference to corresponding objects in other information systems. A generalization relation may be used to relate features, which represent the same real-world object in different Levels-of-Detail, i.e. a featureand its generalized counterpart(s). The direction of this relation is from the feature to the corresponding generalized feature.</Literal>
+        <Literal>= CITY
+
+Type describing the abstract superclass of most CityGML features. Its purpose is to provide a creation and a termination date as well as a reference to corresponding objects in other information systems. A generalization relation may be used to relate features, which represent the same real-world object in different Levels-of-Detail, i.e. a featureand its generalized counterpart(s). The direction of this relation is from the feature to the corresponding generalized feature.
+
+
+getty AAT
+
+Distinctions among villages, towns, and cities are relative and vary according to their individual regional contexts. Generally, cities designate large or important communities with population, status, and internal complexity greater than most towns in the region</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -7368,12 +8538,7 @@ NLUD</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>http://www.opengis.net/citygml/bridge/2.0/boundedBy</IRI>
-        <Literal>topological relation</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>http://www.opengis.net/citygml/bridge/2.0/opening</IRI>
+        <IRI>http://www.opengis.net/citygml/bridge/2.0/54_BCBS_boundedBy</IRI>
         <Literal>topological relation</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
@@ -7407,21 +8572,32 @@ NLUD</Literal>
 				references, and generalization relations. </Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="#Description"/>
+        <AnnotationProperty abbreviatedIRI="dc:description"/>
         <IRI>http://www.opengis.net/citygml/building/2.0/_Building</IRI>
-        <Literal>The Building module allows the representation of thematic and spatial aspects of buildings, building parts, building installations, and interior building struc-tures in five levels of detail (LOD 0 – 4).</Literal>
+        <Literal>Concept: Architecture - Group: Culture &gt; Visual arts
+
+UNESCO THESAURUS</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="#Description"/>
         <IRI>http://www.opengis.net/citygml/building/2.0/_Building</IRI>
-        <Literal>“Building: a substantial and permanent construction with a roof and walls for giving shelter e.g. house, office, shop, warehouse, factory, church, barn.”</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">The Building module allows the representation of thematic and spatial aspects of buildings, building parts, building installations, and interior building struc-tures in five levels of detail (LOD 0 – 4).
+
+CityGML</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#Description"/>
+        <IRI>http://www.opengis.net/citygml/building/2.0/_Building</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">“Building: a substantial and permanent construction with a roof and walls for giving shelter e.g. house, office, shop, warehouse, factory, church, barn.”
+
+NLUD</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="#Source"/>
         <IRI>http://www.opengis.net/citygml/building/2.0/_Building</IRI>
-        <Literal>CityGML
-+
-NLUD</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">CityGML
+NLUD
+UNESCO THESAURUS</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -8151,207 +9327,10 @@ The boundary of a Point is the empty set.
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>http://www.opengis.net/ont/sf#OWLClassImpl_b6007aec_2881_4cae_84cf_26957298e880</IRI>
-        <Literal xml:lang="en">
- A Triangle is a polygon with 3 distinct, non-collinear vertices and no interior boundary.
-    </Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
-        <IRI>http://www.opengis.net/ont/sf#OWLClassImpl_b6007aec_2881_4cae_84cf_26957298e880</IRI>
-        <IRI>http://www.opengis.net/ont/sf</IRI>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://www.opengis.net/ont/sf#OWLClassImpl_b6007aec_2881_4cae_84cf_26957298e880</IRI>
-        <Literal xml:lang="en">Triangle</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://www.opengis.net/ont/sf#OWLClassImpl_b6007aec_2881_4cae_84cf_26957298e880</IRI>
-        <Literal xml:lang="it">Triangle</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>http://www.opengis.net/ont/sf#OWLClassImpl_e682d504_4949_4c17_afd5_a8c382eba8a2</IRI>
-        <Literal xml:lang="en">
-A Surface is a 2-dimensional geometric object.
-A simple Surface may consists of a single patch that is associated with one exterior boundary and 0 or more interior boundaries. A single such Surface patch in 3-dimensional space is isometric to planar Surfaces, by a simple affine rotation matrix that rotates the patch onto the plane z = 0. If the patch is not vertical, the projection onto the same plane is an isomorphism, and can be represented as a linear transformation, i.e. an affine.
-Polyhedral Surfaces are formed by stitching together such simple Surfaces patches along their common boundaries. Such polyhedral Surfaces in a 3-dimensional space may not be planar as a whole, depending on the orientation of their planar normals. If all the patches are in alignment (their normals are parallel), then the whole stitched polyhedral surface is co-planar and can be represented as a single patch if it is connected.
-The boundary of a simple Surface is the set of closed Curves corresponding to its exterior and interior boundaries.
-A Polygon is a simple Surface that is planar. A PolyhedralSurface is a simple surface, consisting of some number of Polygon patches or facets. If a PolyhedralSurface is closed, then it bounds a solid. A MultiSurface containing a set of closed PolyhedralSurfaces can be used to represent a Solid object with holes.
-    </Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
-        <IRI>http://www.opengis.net/ont/sf#OWLClassImpl_e682d504_4949_4c17_afd5_a8c382eba8a2</IRI>
-        <IRI>http://www.opengis.net/ont/sf</IRI>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://www.opengis.net/ont/sf#OWLClassImpl_e682d504_4949_4c17_afd5_a8c382eba8a2</IRI>
-        <Literal xml:lang="en">Surface</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://www.opengis.net/ont/sf#OWLClassImpl_e682d504_4949_4c17_afd5_a8c382eba8a2</IRI>
-        <Literal xml:lang="it">Surface</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>http://www.opengis.net/ont/sf#OWLClassImpl_e8bb09bc_9395_4912_96d1_0787fc3991ed</IRI>
-        <Literal xml:lang="en">
-A Polygon is a planar Surface defined by 1 exterior boundary and 0 or more interior boundaries. Each interior boundary defines a hole in the Polygon.
-The exterior boundary LinearRing defines the top of the surface which is the side of the surface from which the exterior boundary appears to traverse the boundary in a counter clockwise direction. The interior LinearRings will have the opposite orientation, and appear as clockwise when viewed from the top,
-The assertions for Polygons (the rules that define valid Polygons) are as follows:
-a) Polygons are topologically closed;
-b) The boundary of a Polygon consists of a set of LinearRings that make up its exterior and interior boundaries;
-c) No two Rings in the boundary cross and the Rings in the boundary of a Polygon may intersect at a Point but only as a tangent.
-d) A Polygon may not have cut lines, spikes or punctures.
-e) The interior of every Polygon is a connected point set;
-f) The exterior of a Polygon with 1 or more holes is not connected. Each hole defines a connected component of the exterior.
-    </Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
-        <IRI>http://www.opengis.net/ont/sf#OWLClassImpl_e8bb09bc_9395_4912_96d1_0787fc3991ed</IRI>
-        <IRI>http://www.opengis.net/ont/sf</IRI>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://www.opengis.net/ont/sf#OWLClassImpl_e8bb09bc_9395_4912_96d1_0787fc3991ed</IRI>
-        <Literal xml:lang="en">Polygon</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://www.opengis.net/ont/sf#OWLClassImpl_e8bb09bc_9395_4912_96d1_0787fc3991ed</IRI>
-        <Literal xml:lang="it">Polygon</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>http://www.opengis.net/ont/sf#PolyhedralSurface</IRI>
-        <Literal xml:lang="en">
-A PolyhedralSurface is a contiguous collection of polygons, which share common boundary segments. For each pair of polygons that touch, the common boundary shall be expressible as a finite collection of LineStrings. Each such LineString shall be part of the boundary of at most 2 Polygon patches. 
-For any two polygons that share a common boundary, the top of the polygon shall be consistent. This means that when two LinearRings from these two Polygons traverse the common boundary segment, they do so in opposite directions. Since the Polyhedral surface is contiguous, all polygons will be thus consistently oriented. This means that a non-oriented surface (such as Mbius band) shall not have single surface representations. They may be represented by a MultiSurface.
-If each such LineString is the boundary of exactly 2 Polygon patches, then the PolyhedralSurface is a simple, closed polyhedron and is topologically isomorphic to the surface of a sphere. By the Jordan Surface Theorem (Jordans Theorem for 2-spheres), such polyhedrons enclose a solid topologically isomorphic to the interior of a sphere; the ball. In this case, the top of the surface will either point inward or outward of the enclosed finite solid. If outward, the surface is the exterior boundary of the enclosed surface. If inward, the surface is the interior of the infinite complement of the enclosed solid. A Ball with some number of voids (holes) inside can thus be presented as one exterior boundary shell, and some number in interior boundary shells.
-    </Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
-        <IRI>http://www.opengis.net/ont/sf#PolyhedralSurface</IRI>
-        <IRI>http://www.opengis.net/ont/sf</IRI>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://www.opengis.net/ont/sf#PolyhedralSurface</IRI>
-        <Literal xml:lang="en">Polyhedral Surface</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>http://www.opengis.net/ont/sf#TIN</IRI>
-        <Literal xml:lang="en">
-A TIN (triangulated irregular network) is a PolyhedralSurface consisting only of Triangle patches.
-    </Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
-        <IRI>http://www.opengis.net/ont/sf#TIN</IRI>
-        <IRI>http://www.opengis.net/ont/sf</IRI>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://www.opengis.net/ont/sf#TIN</IRI>
-        <Literal xml:lang="en">Triangulated Irregular Network</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>Sloten_casestudy:OWLObjectPropertyImpl_bec977cb_9535_4c9d_989a_b3004a4e6cb6</AbbreviatedIRI>
-        <Literal>connected_to</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>Sloten_casestudy:OWLObjectPropertyImpl_bec977cb_9535_4c9d_989a_b3004a4e6cb6</AbbreviatedIRI>
-        <Literal xml:lang="it">connected_to</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>Sloten_casestudy:consist_of</AbbreviatedIRI>
-        <Literal>constit_of_storey</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>Sloten_casestudy:corresponto-to</AbbreviatedIRI>
-        <Literal>correspond_to</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="#Source"/>
-        <AbbreviatedIRI>Sloten_casestudy:hamlet</AbbreviatedIRI>
-        <Literal>Getty ATT
-
-Small rural centers which contain basic community, education, and religious facilities and which generally do not exceed 250 residents; may also refer to the smallest incorporated units of a municipal government.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AbbreviatedIRI>Sloten_casestudy:is_in</AbbreviatedIRI>
-        <Literal>topological relation</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>Sloten_casestudy:is_in</AbbreviatedIRI>
-        <Literal>is_in_0</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AbbreviatedIRI>Sloten_casestudy:is_located</AbbreviatedIRI>
-        <Literal>topological relation</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>Sloten_casestudy:located_in</AbbreviatedIRI>
-        <Literal>located_in_0</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>Sloten_casestudy:minor_historical_centre</AbbreviatedIRI>
         <Literal>The concept of minor historical centres is introduced by Alberto Predieri, in his report for the “VI Convegno A.N.C.S.A.”- Bergamo, 1971.
 
 Minor historical centres  those included in developing cities (or even stationary ones), originally, they were the core of important political-cultural and economic functions, now lapsed, but with great historical-artistic-environmental value and with cultural and touristic interest. According to the Venice Charter of 1964 and Disegno di Legge n. 1942 in Italy, minor historical centers those municipalities that have a population of less than 5,000 inhabitants.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>Sloten_casestudy:parcel</AbbreviatedIRI>
-        <Literal>parcel/ground</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AbbreviatedIRI>Sloten_casestudy:storey</AbbreviatedIRI>
-        <Literal>Sloten regulation 
-Zoning Plan - Historic Core</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AbbreviatedIRI>Sloten_casestudy:structure</AbbreviatedIRI>
-        <Literal>Sloten regulation 
-Zoning Plan - Historic Core</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AbbreviatedIRI>Sloten_casestudy:structure_not_building</AbbreviatedIRI>
-        <Literal>Sloten regulation 
-Zoning Plan - Historic Core</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AbbreviatedIRI>Sloten_casestudy:sub_area</AbbreviatedIRI>
-        <Literal>Sloten regulation 
-Zoning Plan - Historic Core</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="#Source"/>
-        <AbbreviatedIRI>Sloten_casestudy:village</AbbreviatedIRI>
-        <Literal>Getty ATT
-
-Distinctions among villages, towns, and cities are relative and vary according to their individual regional contexts. Villages generally designate units of compact settlement, varying in size but usually larger than hamlets and smaller than towns and distinguished from the surrounding rural territory</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
@@ -8378,6 +9357,34 @@ Distinctions among villages, towns, and cities are relative and vary according t
         <AbbreviatedIRI>skos:OWLDataPropertyImpl_9a312573_fd8a_4997_a91a_4dc4eebeea7f</AbbreviatedIRI>
         <Literal xml:lang="en">By convention, skos:notation is used with a typed literal in the object position of the triple.</Literal>
     </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://ainf.aau.at/ontodebug#axiom"/>
+        <AnonymousIndividual nodeID="_:genid2147483648"/>
+        <Literal>hamlet SubClassOf historical_centre</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://ainf.aau.at/ontodebug#type"/>
+        <AnonymousIndividual nodeID="_:genid2147483648"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://ainf.aau.at/ontodebug#axiom"/>
+        <AnonymousIndividual nodeID="_:genid2147483649"/>
+        <Literal>Historical_town EquivalentTo historical_centre</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://ainf.aau.at/ontodebug#type"/>
+        <AnonymousIndividual nodeID="_:genid2147483649"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">false</Literal>
+    </AnnotationAssertion>
+    <SubAnnotationPropertyOf>
+        <AnnotationProperty IRI="http://ainf.aau.at/ontodebug#axiom"/>
+        <AnnotationProperty IRI="http://ainf.aau.at/ontodebug#testCase"/>
+    </SubAnnotationPropertyOf>
+    <SubAnnotationPropertyOf>
+        <AnnotationProperty IRI="http://ainf.aau.at/ontodebug#type"/>
+        <AnnotationProperty IRI="http://ainf.aau.at/ontodebug#testCase"/>
+    </SubAnnotationPropertyOf>
     <SubAnnotationPropertyOf>
         <AnnotationProperty IRI="#definition"/>
         <AnnotationProperty IRI="#note"/>
