@@ -64,6 +64,10 @@ Keywords:
 Geospatial ontology, Minor Historical Centres (MHC), Spatial and Temporal Documentation, Geospatial Information (GI), Geographic Information System and Science (GIS), Semantics Formalisation, WebGIS, Linked data, Multiscale representation, Level of Details, Cultural Architectural Built and Landscape Heritage.</Literal>
     </Annotation>
     <Annotation>
+     <AnnotationProperty abbreviatedIRI="dc:title"/>
+        <Literal>MHC (Minor Historical Centres) ontology</Literal>
+    </Annotation>
+    <Annotation>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <Literal datatypeIRI="http://www.opengis.net/ont/geosparql#gmlLiteral">Geospatial ontology to support the documentation of Minor Historical Centres (MHC)
 
